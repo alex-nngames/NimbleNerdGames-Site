@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - My Games Website</title>
+  <title>About - NimbleNerdGames</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <h1>My Games Website</h1>
+    <h1>NimbleNerdGames</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -25,7 +25,11 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 My Games Website</p>
+    <p>NimbleNerdGames &copy; <span id="year"></span></p>
   </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
