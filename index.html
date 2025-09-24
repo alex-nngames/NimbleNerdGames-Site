@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NimbleNerd</title>
-  <link rel="stylesheet" href="style.css"><!-- links your CSS -->
+  <!-- Link to your stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- If your CSS is inside a css/ folder, change to: href="css/style.css" -->
 </head>
 <body>
   <header>
@@ -13,7 +15,6 @@
       <a href="index.html">Games</a>
       <a href="contact.html">Contact</a>
       <a href="about.html">About</a>
-      <a href="privacy.html">Privacy</a>
     </nav>
   </header>
 
@@ -25,10 +26,15 @@
   </main>
 
   <footer>
-    <p>NimbleNerdGames &copy; <span id="year"></span></p>
+    <p>
+      NimbleNerdGames &copy; <span id="year"></span> |
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
   </footer>
-  <!-- Link to external JS file -->
+
+  <!-- External JS to auto-update year -->
   <script src="js/updateYearAuto.js"></script>
 </body>
 </html>
+
 
