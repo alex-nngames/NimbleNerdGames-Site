@@ -33,10 +33,6 @@ footer {
   text-align: center;
   padding: 1rem;
   color: rgb(205, 205, 205); /* light grey */  
-}
-
-/* Style the Privacy Policy link in the footer */
-footer a {
-  color: rgb(205, 205, 205); /* light grey */        /* change link color */
   text-decoration: none; /* removes underline */
 }
+
