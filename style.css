@@ -29,15 +29,16 @@ a {
   text-align: center;
 }
 
+/* Title */
 .site-title {
-  color: #000;             /* always black */
-  font-weight: 700;
-  transition: opacity 0.3s ease;
+  text-decoration: none;
+  color: #000;          /* always black */
+  transition: none;     /* remove hover transition */
 }
 
 .site-title:hover {
-  opacity: 0.9;            /* subtle fade only */
-  color: #000;             /* no blue hover ever */
+  color: #000;          /* stays black on hover */
+  opacity: 1;
 }
 
 .site-logo {
@@ -55,15 +56,16 @@ nav {
   margin-top: 0.5rem;
 }
 
+/* Navigation */
 nav a {
-  color: #000;             /* black links */
-  text-decoration: none;   /* remove underline */
+  color: #000;          /* black */
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #555;             /* softer gray on hover */
-  text-decoration: none;   /* still no underline */
+  color: #444;          /* slightly lighter black */
+  text-decoration: none; /* no underline */
 }
 
 /* Footer */
