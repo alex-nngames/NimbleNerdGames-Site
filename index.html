@@ -52,27 +52,21 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
-    <div class="socials">
-      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="2" width="20" height="20" rx="5" stroke="black" stroke-width="2"/>
-          <circle cx="12" cy="12" r="5" stroke="black" stroke-width="2"/>
-          <circle cx="18" cy="6" r="1.5" fill="black"/>
-        </svg>
-        <span>Instagram</span>
-      </a>
-      <a href="https://x.com" target="_blank" aria-label="X">
-        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 4L20 20M20 4L4 20" stroke="black" stroke-width="2"/>
-        </svg>
-        <span>X</span>
-      </a>
-    </div>
-    <p>NimbleNerdGames &copy <span id="year"></span></p>
-    <a href="/privacy/">Privacy Policy</a>
-  </footer>
+  <div class="socials">
+    <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
+      <img src="/images/instagram.svg" alt="Instagram" width="20" height="20">
+      Instagram
+    </a>
+    <a href="https://x.com/yourprofile" target="_blank" rel="noopener noreferrer">
+      <img src="/images/x.svg" alt="X (Twitter)" width="20" height="20">
+      X
+    </a>
+  </div>
+
+  <p>NimbleNerdGames &copy; <span id="year"></span></p> |
+  <a href="/privacy/">Privacy Policy</a>
+</footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
