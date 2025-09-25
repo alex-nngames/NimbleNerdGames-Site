@@ -68,15 +68,15 @@ nav a:hover {
 
 /* Footer */
 footer {
-  background: #eee;
+  background: transparent;   /* use 'white' if you prefer solid white */
   text-align: center;
   padding: 1rem;
   color: #666;
 }
 
 footer p, footer a {
-  display: inline;      /* keep on the same line */
-  margin: 0 5px;        /* small spacing between items */
+  display: inline;      
+  margin: 0 5px;        
   vertical-align: middle;
 }
 
@@ -89,6 +89,7 @@ footer a {
 footer a:hover {
   color: #999; /* lighter gray on hover */
 }
+
 
 /* Main content */
 main {
