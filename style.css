@@ -257,33 +257,9 @@ main {
    Footer Socials + Subscribe
    ========================= */
 
-/* Social icons */
-footer .socials {
-  margin-bottom: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
-
-footer .socials a {
-  display: inline-block;
-}
-
-footer .socials img {
-  width: 24px;   /* control size */
-  height: 24px;  /* keep square ratio */
-  object-fit: contain;
-  display: block;
-  transition: opacity 0.3s ease;
-}
-
-footer .socials img:hover {
-  opacity: 0.6;
-}
-
 /* Subscribe form in footer */
 footer .subscribe-form {
-  margin: 1rem 0;
+  margin: 1.5rem 0 2rem;   /* extra space below form before socials */
   display: flex;
   justify-content: center;
   gap: 8px;
@@ -312,6 +288,31 @@ footer .subscribe-form button {
 footer .subscribe-form button:hover {
   background: #555;
 }
+
+/* Social icons */
+footer .socials {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+footer .socials a {
+  display: inline-block;
+}
+
+footer .socials img {
+  width: 24px;   /* fixed size */
+  height: 24px;
+  object-fit: contain;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+footer .socials img:hover {
+  opacity: 0.6;
+}
+
 
 
 
