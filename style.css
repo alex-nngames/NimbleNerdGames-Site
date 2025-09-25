@@ -60,7 +60,7 @@ footer {
   background: #eee;
   text-align: center;
   padding: 1rem;
-  color: #666; /* copyright text color */
+  color: rgb(205, 205, 205); /* copyright text color */
 }
 
 footer a {
