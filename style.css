@@ -4,6 +4,7 @@ body {
   padding: 0;
   font-family: 'Inter', Arial, sans-serif;
   line-height: 1.5;
+  color: #111;
 }
 
 /* Header styling */
@@ -49,7 +50,7 @@ nav {
 }
 
 nav a {
-  color: rgb(0, 0, 0);
+  color: #fff;
   text-decoration: none;
 }
 
@@ -59,7 +60,17 @@ nav a:hover {
 
 /* Main content */
 main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  text-align: center;
   padding: 2rem;
+}
+
+.contact-container {
+  max-width: 600px;
+  padding: 20px;
 }
 
 footer p {
