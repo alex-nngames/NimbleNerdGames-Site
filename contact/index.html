@@ -1,63 +1,57 @@
-<!-- Put this inside your page where <main> goes -->
-<main class="contact-main">
-  <style>
-    /* Page-specific overrides so this layout matches your screenshot */
-    main.contact-main {
-      display: block;        /* override any site-wide flex centering */
-      text-align: left;
-      min-height: auto;
-      padding: 2rem;
-      margin-top: 0;         /* pull it up if needed */
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – NimbleNerdGames</title>
+  
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <a href="/" class="site-home-link">
+      <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
+      <h1 class="site-title">NimbleNerd</h1>
+    </a>
+    <nav>
+      <a href="/">Games</a>
+      <a href="/contact/">Contact</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
 
-    .contact-container {
-      max-width: 700px;
-      margin: 0 auto;        /* center column on the page */
-      padding: 0;
-    }
+  <!-- Main Contact Section -->
+  <main>
+    <div class="contact-container">
+      <h2>General Enquiries</h2>
+      <p>
+        For all press and general enquiries, please contact 
+        <span class="email">alex@nimblenerdgames.com</span>
+      </p>
 
-    .contact-container h2 {
-      font-weight: 600;      /* semi-bold headings */
-      margin: 1.2rem 0 0.25rem 0;
-      font-size: 1.25rem;
-      text-align: left;
-    }
+      <h2>Game Support</h2>
+      <p>
+        Looking for technical support? Contact us at 
+        <span class="email">support@nimblenerdgames.com</span>
+      </p>
+    </div>
+  </main>
 
-    .contact-container p {
-      margin: 0;             /* removes extra paragraph gap */
-      padding: 0;
-      line-height: 1.5;
-      font-weight: 400;
-    }
+  <!-- Footer -->
+  <footer>
+    <p>NimbleNerd &copy; <span id="year"></span></p> |
+    <a href="/privacy/">Privacy Policy</a>
+  </footer>
 
-    /* Make the email appear immediately below the sentence with tight spacing */
-    .contact-container .email {
-      display: block;        /* forces new line */
-      margin-top: 0.15rem;   /* very small gap — adjust if you want it tighter/looser */
-      font-weight: 700;      /* bold */
-      color: #000;
-    }
-
-    /* If your global stylesheet overrides these, uncomment the important rules below */
-    /*
-    main.contact-main { display:block !important; text-align:left !important; }
-    .contact-container .email { display:block !important; margin-top:0.15rem !important; }
-    */
-  </style>
-
-  <div class="contact-container">
-    <h2>General Enquiries</h2>
-    <p>
-      For all press and general enquiries, please contact
-      <span class="email">alex@nimblenerdgames.com</span>
-    </p>
-
-    <h2>Game Support</h2>
-    <p>
-      Looking for technical support? Contact us at
-      <span class="email">support@nimblenerdgames.com</span>
-    </p>
-  </div>
-</main>
-
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
