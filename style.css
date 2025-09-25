@@ -274,5 +274,31 @@ footer .socials a:hover {
   color: #999; /* matches your hover */
 }
 
+  /* Social links in footer */
+footer .socials {
+  margin-bottom: 0.5rem;
+}
+
+footer .socials a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #666;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+footer .socials a:hover {
+  color: #999;
+}
+
+footer .socials img {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+}
+
+
 
 
