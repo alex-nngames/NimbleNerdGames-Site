@@ -74,19 +74,22 @@ footer {
   color: #666;
 }
 
-footer p {
-  margin: 0;
-  display: inline-block;
+footer p, footer a {
+  display: inline;      /* keep on the same line */
+  margin: 0 5px;        /* small spacing between items */
+  vertical-align: middle;
 }
 
 footer a {
   color: #666;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
 footer a:hover {
-  color: #999; /* slightly lighter gray */
+  color: #999; /* lighter gray on hover */
 }
+
 /* Main content */
 main {
   display: flex;
