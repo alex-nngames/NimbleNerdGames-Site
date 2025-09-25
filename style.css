@@ -351,6 +351,29 @@ footer .subscribe-form button:hover {
   background: #555;
 }
 
+  /* Social icons */
+footer .socials {
+  margin-bottom: 1rem;
+}
+
+footer .socials a {
+  margin: 0 8px;
+  display: inline-block;
+}
+
+footer .socials img {
+  width: 24px;   /* control size */
+  height: 24px;  /* keep square ratio */
+  object-fit: contain;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+footer .socials img:hover {
+  opacity: 0.6;
+}
+
+
 
 
 
