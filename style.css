@@ -5,12 +5,13 @@ body {
   font-family: 'Inter', Arial, sans-serif;
   line-height: 1.5;
   color: #111;
+  background: #fff; /* ensures background stays white */
 }
 
 /* Header styling */
 header {
-  background: #333;
-  color: #fff;
+  background: #fff;        /* white header background */
+  color: #000;             /* black text */
   padding: 1rem;
   text-align: center;
 }
@@ -24,12 +25,12 @@ header {
 
 .site-title {
   text-decoration: none;
-  color: inherit;
+  color: inherit;          /* black */
   transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .site-title:hover {
-  color: rgb(0, 128, 255);
+  color: rgb(0, 128, 255); /* hover blue */
   opacity: 0.9;
 }
 
@@ -49,12 +50,14 @@ nav {
 }
 
 nav a {
-  color: #fff;
+  color: #000;             /* black nav links */
   text-decoration: none;
+  font-weight: 500;
 }
 
 nav a:hover {
   text-decoration: underline;
+  color: rgb(0, 128, 255); /* hover blue */
 }
 
 /* Main content */
@@ -67,49 +70,10 @@ main {
   padding: 2rem;
 }
 
-.contact-container {
+.contact-container,
+.about-container,
+.privacy-container {
   max-width: 600px;
-  padding: 20px;
-}
-
-/* Contact page text */
-main h2 {
-  font-weight: 600;   /* semi-bold */
-  margin-top: 2rem;
-}
-
-main p {
-  font-weight: 400;   /* regular */
-  margin-bottom: 1.5rem;
-}
-
-main p strong,
-main .email {
-  font-weight: 700;   /* bold */
-  color: #000;        /* makes emails stand out */
-}
-
-/* Footer */
-footer {
-  background: #eee;
-  text-align: center;
-  padding: 1rem;
-  color: rgb(205, 205, 205);
-}
-
-footer p {
-  margin: 0;
-  display: inline-block;
-}
-
-footer a {
-  color: rgb(205, 205, 205);
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: rgb(180, 180, 180);
-  text-decoration: underline;
-}
+  pad
 
 
