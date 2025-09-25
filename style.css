@@ -9,7 +9,7 @@ body {
 /* Header styling */
 header {
   background: #333;
-  color: #fff;
+  color: rgb(255, 255, 255);
   padding: 1rem;
   text-align: center;   /* centers everything inside header */
   margin-top: 60px;     /* moves header down */
@@ -42,7 +42,7 @@ nav {
 }
 
 nav a {
-  color: #fff;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
