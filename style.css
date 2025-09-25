@@ -36,3 +36,8 @@ footer {
   padding: 1rem;
 }
 
+footer a {
+  color: rgb(205, 205, 205);   /* custom RGB color */
+  text-decoration: none;
+}
+
