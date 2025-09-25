@@ -53,11 +53,11 @@ p {
 }
 
 .emoji {
+  display: inline-block;
   width: 1em;
   height: 1em;
-  vertical-align: middle;   /* try baseline, middle, top */
-  position: relative;
-  top: -2px;                /* moves emoji up */
+  vertical-align: -0.15em; /* fine-tunes baseline alignment */
+  margin-left: 0.25em;     /* space after word */
 }
 
 /* Navigation */
