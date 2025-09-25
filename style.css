@@ -53,9 +53,11 @@ p {
 }
 
 .emoji {
-  width: 1em;          /* match text size */
+  width: 1em;
   height: 1em;
-  vertical-align: middle;
+  vertical-align: middle;   /* try baseline, middle, top */
+  position: relative;
+  top: -2px;                /* moves emoji up */
 }
 
 /* Navigation */
