@@ -102,14 +102,12 @@ footer a:hover {
   color: #999; /* lighter gray on hover */
 }
 
-
 /* Main content */
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 70vh;
-  text-align: center;
+  display: block;   /* instead of flex centering */
+  text-align: left; /* makes all text inside left aligned */
+  margin: 0 auto;
+  max-width: 600px; /* keeps it neat */
   padding: 2rem;
 }
 
