@@ -24,13 +24,14 @@ header {
 }
 
 .site-title {
-  text-decoration: none;
-  color: #000; /* always black */
-  transition: opacity 0.3s ease; /* subtle hover fade only */
+  color: #000;             /* always black */
+  font-weight: 700;
+  transition: opacity 0.3s ease;
 }
 
 .site-title:hover {
-  opacity: 0.9; /* no color change, just a tiny fade */
+  opacity: 0.9;            /* subtle fade only */
+  color: #000;             /* no blue hover ever */
 }
 
 .site-logo {
@@ -49,15 +50,16 @@ nav {
 }
 
 nav a {
-  color: #000;           /* black text */
-  text-decoration: none; /* no underline */
+  color: #000;             /* black links */
+  text-decoration: none;   /* remove underline */
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #555;           /* lighter gray on hover */
-  text-decoration: none; /* no underline */
+  color: #555;             /* softer gray on hover */
+  text-decoration: none;   /* still no underline */
 }
+
 /* Footer */
 footer {
   background: #eee;
