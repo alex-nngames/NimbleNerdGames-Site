@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – NimbleNerdGames</title>
+  
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <a href="/" class="site-home-link">
+      <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
+      <h1 class="site-title">NimbleNerd</h1>
+    </a>
+    <nav>
+      <a href="/">Games</a>
+      <a href="/contact/">Contact</a>
+      <a href="/about/">About</a>
+    </nav>
+  </header>
+
+  <!-- Main Contact Section -->
+  <main>
+    <div class="contact-container">
+      <h2>General Enquiries</h2>
+      <p>
+        For all press and general enquiries, please contact 
+        <span class="email">alex@nimblenerdgames.com</span>
+      </p>
+
+      <h2>Game Support</h2>
+      <p>
+        Looking for technical support? Contact us at 
+        <span class="email">support@nimblenerdgames.com</span>
+      </p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>NimbleNerd &copy; <span id="year"></span></p> |
+    <a href="/privacy/">Privacy Policy</a>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
