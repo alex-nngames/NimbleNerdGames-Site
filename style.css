@@ -18,8 +18,8 @@ header {
 .site-home-link {
   text-decoration: none;
   color: inherit;
-  display: block;     /* stack logo and title */
-  text-align: center; /* center both */
+  display: block;
+  text-align: center;
 }
 
 .site-title {
@@ -49,7 +49,7 @@ nav {
 }
 
 nav a {
-  color: #fff; /* white so it shows on dark header */
+  color: #fff;
   text-decoration: none;
 }
 
@@ -72,6 +72,23 @@ main {
   padding: 20px;
 }
 
+/* Contact page text */
+main h2 {
+  font-weight: 600;   /* semi-bold */
+  margin-top: 2rem;
+}
+
+main p {
+  font-weight: 400;   /* regular */
+  margin-bottom: 1.5rem;
+}
+
+main p strong,
+main .email {
+  font-weight: 700;   /* bold */
+  color: #000;        /* makes emails stand out */
+}
+
 /* Footer */
 footer {
   background: #eee;
@@ -91,7 +108,8 @@ footer a {
 }
 
 footer a:hover {
-  color: rgb(180, 180, 180); /* slightly darker on hover */
+  color: rgb(180, 180, 180);
   text-decoration: underline;
 }
+
 
