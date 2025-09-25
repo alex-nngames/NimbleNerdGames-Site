@@ -20,6 +20,13 @@ header {
   color: inherit;          /* use same color as header text */
 }
 
+.site-logo {
+  display: block;
+  margin: 0 auto 15px auto; /* centers logo + adds spacing */
+  max-width: 120px;         /* adjust as needed */
+  height: auto;
+}
+
 nav {
   display: flex;
   justify-content: center;  /* centers all links as a group */
