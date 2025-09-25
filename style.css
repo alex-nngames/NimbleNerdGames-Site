@@ -60,6 +60,7 @@ p {
   margin-left: 0.25em;     /* adds a space after "thanks" */
 }
 
+/* Contact Page */
 .contact-container {
   max-width: 600px;
   padding: 20px;
@@ -126,7 +127,6 @@ p {
   color: #000;
 }
 
-
 /* Navigation */
 nav {
   display: flex;
@@ -135,7 +135,6 @@ nav {
   margin-top: 0.5rem;
 }
 
-/* Navigation */
 nav a {
   color: #000;          /* black */
   text-decoration: none;
@@ -184,9 +183,10 @@ main {
 .about-container,
 .privacy-container {
   max-width: 600px;
-  pad
+  padding: 20px;
+}
 
-  /* --- Games Page --- */
+/* --- Games Page --- */
 .games-page {
   text-align: center;
   padding: 2rem 1rem;
@@ -213,165 +213,8 @@ main {
   flex-wrap: wrap;
 }
 
-.subscribe-form input[type="email"] {
-  padding: 0.6rem 1rem;
-  border: 2px solid black;
-  border-radius: 6px;
-  font-size: 1rem;
-  width: 250px;
-}
+.subscribe-form input[type="email]()
 
-.subscribe-form button {
-  padding: 0.6rem 1.2rem;
-  background: black;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.2s ease;
-}
-
-.subscribe-form button:hover {
-  background: #444;
-}
-
-/* Coming Soon Section */
-.coming-soon h2 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #999;
-  margin-bottom: 1.5rem;
-}
-
-.app-icon {
-  margin: 1.5rem 0;
-}
-
-.coming-soon p {
-  font-size: 1rem;
-  color: #777;
-}
-
-/* Footer Socials (keeps your footer intact, adds optional socials row) */
-footer .socials {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 1rem;
-}
-
-footer .socials a {
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-  color: #666; /* matches your footer text */
-  text-decoration: none;
-  font-weight: 500;
-}
-
-footer .socials a:hover {
-  color: #999; /* matches your hover */
-}
-
-  /* Social links in footer */
-footer .socials {
-  margin-bottom: 0.5rem;
-}
-
-footer .socials a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #666;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  transition: color 0.3s ease;
-}
-
-footer .socials a:hover {
-  color: #999;
-}
-
-footer .socials img {
-  width: 18px;
-  height: 18px;
-  display: inline-block;
-}
-
-  /* Social icons */
-footer .socials {
-  margin-bottom: 1rem;
-}
-
-footer .socials a {
-  margin: 0 8px;
-  display: inline-block;
-}
-
-footer .socials img {
-  width: 24px;
-  height: 24px;
-  transition: opacity 0.3s ease;
-}
-
-footer .socials img:hover {
-  opacity: 0.6; /* subtle hover effect */
-}
-
-/* Subscribe form */
-footer .subscribe-form {
-  margin: 1rem 0;
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-}
-
-footer .subscribe-form input {
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-}
-
-footer .subscribe-form button {
-  padding: 8px 16px;
-  background: #333;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-footer .subscribe-form button:hover {
-  background: #555;
-}
-
-  /* Social icons */
-footer .socials {
-  margin-bottom: 1rem;
-}
-
-footer .socials a {
-  margin: 0 8px;
-  display: inline-block;
-}
-
-footer .socials img {
-  width: 24px;   /* control size */
-  height: 24px;  /* keep square ratio */
-  object-fit: contain;
-  display: block;
-  transition: opacity 0.3s ease;
-}
-
-footer .socials img:hover {
-  opacity: 0.6;
-}
 
 
 
