@@ -28,20 +28,49 @@
   </header>
 
   <!-- Page content -->
-  <main>
-    <div class="home-container">
-      <h2>Welcome to NimbleNerdGames</h2>
-      <p>
-        This is our home page, where you’ll find the latest games, updates, and 
-        announcements. Stay tuned as we continue building exciting experiences 
-        for players everywhere!
-      </p>
-    </div>
+  <main class="games-page">
+    <!-- Subscribe Section -->
+    <section class="subscribe-section">
+      <p>Join my mailing list to get notified about updates and my new game releases</p>
+      <form class="subscribe-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <!-- Coming Soon Section -->
+    <section class="coming-soon">
+      <h2>Something puzzling is on the horizon. It's coming soon, so keep watching!</h2>
+      <div class="app-icon">
+        <!-- Simple placeholder SVG for app icon -->
+        <svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+          <rect width="120" height="120" rx="24" fill="#eee" stroke="#aaa" stroke-width="2"/>
+          <text x="50%" y="55%" text-anchor="middle" font-size="48" font-family="Inter" fill="#888">?</text>
+        </svg>
+      </div>
+      <p>A new game coming soon for iOS and Android</p>
+    </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>NimbleNerdGames &copy; <span id="year"></span></p> |
+    <div class="socials">
+      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="2" width="20" height="20" rx="5" stroke="black" stroke-width="2"/>
+          <circle cx="12" cy="12" r="5" stroke="black" stroke-width="2"/>
+          <circle cx="18" cy="6" r="1.5" fill="black"/>
+        </svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://x.com" target="_blank" aria-label="X">
+        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 4L20 20M20 4L4 20" stroke="black" stroke-width="2"/>
+        </svg>
+        <span>X</span>
+      </a>
+    </div>
+    <p>Copyright © NimbleNerdGames <span id="year"></span></p>
     <a href="/privacy/">Privacy Policy</a>
   </footer>
 
@@ -50,4 +79,5 @@
   </script>
 </body>
 </html>
+
 
