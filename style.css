@@ -56,8 +56,8 @@ p {
   display: inline-block;
   width: 1em;
   height: 1em;
-  vertical-align: -0.15em; /* fine-tunes baseline alignment */
-  margin-left: 0.25em;     /* space after word */
+  vertical-align: -0.15em; /* brings it down a little */
+  margin-left: 0.25em;     /* adds a space after "thanks" */
 }
 
 /* Navigation */
