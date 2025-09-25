@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NimbleNerd – Games</title>
-    <!-- Link to your stylesheet -->
+  <title>Privacy Policy – NimbleNerdGames</title>
   <link rel="stylesheet" href="style.css">
-    <!-- If your CSS is inside a css/ folder, change to: href="css/style.css" -->
 </head>
 <body>
+  <!-- Header (identical across all pages) -->
   <header>
     <a href="index.html">
-    <img src="mockLogo.svg" alt="NimbleNerdGames Logo" class="site-logo">
-  </a>
+      <img src="mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
+    </a>
     <a href="index.html" class="site-title">
-    <h1>NimbleNerd</h1>
-  </a>
+      <h1>NimbleNerd</h1>
+    </a>
     <nav>
       <a href="/">Games</a>
       <a href="/about/">About</a>
@@ -23,22 +22,22 @@
     </nav>
   </header>
 
+  <!-- Page-specific content -->
   <main>
-    <section>
-      <h2>About This Site</h2>
-      <p>This is my first website hosted on GitHub Pages!</p>
-    </section>
+    <h2>Contact</h2>
+    <p>If you’d like to reach me, send me an email at: 
+      <a href="mailto:youremail@example.com">youremail@example.com</a>
+    </p>
   </main>
 
+  <!-- Footer (identical across all pages) -->
   <footer>
-    <p>NimbleNerdGames &copy; <span id="year"></span> |
-      <a href="/privacy/">Privacy Policy</a>
-    </p>
+    <p>NimbleNerd &copy; <span id="year"></span></p> |
+    <a href="/privacy/">Privacy Policy</a>
   </footer>
 
-  <!-- External JS to auto-update year -->
-  <script src="js/updateYearAuto.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
-
