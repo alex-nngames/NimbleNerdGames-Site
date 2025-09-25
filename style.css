@@ -15,6 +15,13 @@ header {
   margin-top: 60px;     /* moves header down */
 }
 
+.site-home-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;     /* stack logo and title */
+  text-align: center; /* center both */
+}
+
 .site-title {
   text-decoration: none;   /* remove underline */
   color: inherit;          /* use same color as header text */
