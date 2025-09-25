@@ -60,6 +60,29 @@ nav a:hover {
   color: rgb(0, 128, 255); /* hover blue */
 }
 
+/* Footer */
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 1rem;
+  color: #666; /* softer gray for text */
+}
+
+footer p {
+  margin: 0;
+  display: inline; /* keep it inline */
+}
+
+footer a {
+  color: #666;
+  text-decoration: none;
+  margin-left: 8px; /* small gap between text and link */
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
 /* Main content */
 main {
   display: flex;
