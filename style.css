@@ -80,73 +80,6 @@ p {
   font-weight: 700; 
 }
 
-/* --- Games Page --- */
-.games-page {
-  text-align: center;
-  padding: 2rem 1rem;
-  max-width: 800px;
-  margin: 0 auto;
-  font-family: 'Inter', sans-serif;
-}
-
-/* Subscribe Section */
-.subscribe-section {
-  margin-bottom: 3rem;
-}
-
-.subscribe-section p {
-  font-weight: 600;
-  color: #777;
-  margin-bottom: 1rem;
-}
-
-.subscribe-form {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.subscribe-form input[type="email"] {
-  padding: 0.6rem 1rem;
-  border: 2px solid black;
-  border-radius: 6px;
-  font-size: 1rem;
-  width: 250px;
-}
-
-.subscribe-form button {
-  padding: 0.6rem 1.2rem;
-  background: black;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.2s ease;
-}
-
-.subscribe-form button:hover {
-  background: #444;
-}
-
-/* Coming Soon Section */
-.coming-soon h2 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #999;
-  margin-bottom: 1.5rem;
-}
-
-.app-icon {
-  margin: 1.5rem 0;
-}
-
-.coming-soon p {
-  font-size: 1rem;
-  color: #777;
-}
-
 /* =========================
    Privacy Policy Page Styles
    ========================= */
@@ -252,5 +185,94 @@ main {
 .privacy-container {
   max-width: 600px;
   pad
+
+  /* --- Games Page --- */
+.games-page {
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Subscribe Section */
+.subscribe-section {
+  margin-bottom: 3rem;
+}
+
+.subscribe-section p {
+  font-weight: 600;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.subscribe-form input[type="email"] {
+  padding: 0.6rem 1rem;
+  border: 2px solid black;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 250px;
+}
+
+.subscribe-form button {
+  padding: 0.6rem 1.2rem;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s ease;
+}
+
+.subscribe-form button:hover {
+  background: #444;
+}
+
+/* Coming Soon Section */
+.coming-soon h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #999;
+  margin-bottom: 1.5rem;
+}
+
+.app-icon {
+  margin: 1.5rem 0;
+}
+
+.coming-soon p {
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Footer Socials (keeps your footer intact, adds optional socials row) */
+footer .socials {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+footer .socials a {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #666; /* matches your footer text */
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer .socials a:hover {
+  color: #999; /* matches your hover */
+}
+
 
 
