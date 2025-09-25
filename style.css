@@ -92,6 +92,6 @@ footer a {
 }
 
 footer a:hover {
-  color: rgb(205, 205, 205); /* darker shade on hover */
+  color: rgb(180,180,180);
   text-decoration: underline;
 }
