@@ -4,63 +4,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact – NimbleNerdGames</title>
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <!-- Your global stylesheet -->
   <link rel="stylesheet" href="/style.css">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 40px;
-      line-height: 1.6;
-      color: #111;
-    }
-
-    h2 {
-      font-weight: 600; /* Semi Bold */
-      margin-top: 2rem;
-    }
-
-    p {
-      font-weight: 400; /* Regular */
-      margin-bottom: 1.5rem;
-    }
-
-    .email {
-      font-weight: 700; /* Bold for emails */
-    }
-  </style>
 </head>
 <body>
-  <!-- Header (identical across all pages) -->
+  <!-- Header -->
   <header>
     <a href="/" class="site-home-link">
       <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
       <h1 class="site-title">NimbleNerd</h1>
     </a>
     <nav>
-        <a href="/">Games</a>
-        <a href="/contact/">Contact</a>
-        <a href="/about/">About</a>
-</nav>
+      <a href="/">Games</a>
+      <a href="/contact/">Contact</a>
+      <a href="/about/">About</a>
+    </nav>
   </header>
 
-  <!-- Page-specific content -->
+  <!-- Page content -->
   <main>
-  <h2>General Enquiries</h2>
-  <p>
-    For all press and general enquiries, please contact 
-    <span class="email">alex@nimblenerdgames.com</span>
-  </p>
+    <div class="contact-container">
+      <h2>General Enquiries</h2>
+      <p>
+        For all press and general enquiries, please contact 
+        <strong>alex@nimblenerdgames.com</strong>
+      </p>
 
-  <h2>Game Support</h2>
-  <p>
-    Looking for technical support? Contact us at 
-    <span class="email">support@nimblenerdgames.com</span>
-  </p>
-</main>
+      <h2>Game Support</h2>
+      <p>
+        Looking for technical support? Contact us at 
+        <strong>support@nimblenerdgames.com</strong>
+      </p>
+    </div>
+  </main>
 
-  <!-- Footer (identical across all pages) -->
+  <!-- Footer -->
   <footer>
     <p>NimbleNerd &copy; <span id="year"></span></p> |
     <a href="/privacy/">Privacy Policy</a>
