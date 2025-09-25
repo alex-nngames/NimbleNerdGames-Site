@@ -30,10 +30,12 @@
   </main>
 
   <footer>
-    <p>NimbleNerdGames &copy; <span id="year"></span> | <a href="privacy.html">Privacy Policy</a>
-</p>
-  </footer>
-  <!-- Link to external JS file -->
-  <script src="updateYearAuto.js"></script>
+  <p>NimbleNerdGames &copy; <span id="year"></span></p>
+  <a href="privacy.html">Privacy Policy</a>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
