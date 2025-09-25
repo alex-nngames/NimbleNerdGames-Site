@@ -60,27 +60,25 @@ p {
   margin-left: 0.25em;     /* adds a space after "thanks" */
 }
 
-/* Contact page container */
 .contact-container {
   max-width: 600px;
   padding: 20px;
-  text-align: left; /* headings and paragraphs left aligned */
+  text-align: left;
 }
 
 .contact-container h2 {
-  font-weight: 600; /* Semi Bold */
+  font-weight: 600; 
   margin-top: 2rem;
 }
 
 .contact-container p {
-  font-weight: 400; /* Regular */
+  font-weight: 400;
   margin-bottom: 1.5rem;
 }
 
 .contact-container .email {
-  font-weight: 700; /* Bold emails */
+  font-weight: 700; 
 }
-
 
 /* =========================
    Privacy Policy Page Styles
