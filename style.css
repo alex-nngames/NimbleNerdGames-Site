@@ -55,11 +55,6 @@ main {
   padding: 2rem;
 }
 
-footer p {
-  margin: 0;
-  display: inline-block; /* keeps text + link on same line */
-}
-
 /* Footer */
 footer {
   background: #eee;
