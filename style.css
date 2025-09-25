@@ -48,6 +48,12 @@ a {
   height: auto;
 }
 
+.emoji {
+  width: 1em;          /* scale with text size */
+  height: 1em;
+  vertical-align: middle; /* align nicely with text */
+}
+
 /* Navigation */
 nav {
   display: flex;
