@@ -25,13 +25,12 @@ header {
 
 .site-title {
   text-decoration: none;
-  color: inherit;          /* black */
-  transition: color 0.3s ease, opacity 0.3s ease;
+  color: #000; /* always black */
+  transition: opacity 0.3s ease; /* subtle hover fade only */
 }
 
 .site-title:hover {
-  color: rgb(0, 128, 255); /* hover blue */
-  opacity: 0.9;
+  opacity: 0.9; /* no color change, just a tiny fade */
 }
 
 .site-logo {
