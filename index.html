@@ -52,21 +52,30 @@
     </section>
   </main>
 
-  <footer>
+  <!-- Footer -->
+<footer>
+  <!-- Social icons -->
   <div class="socials">
     <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
-      <img src="/images/instagram.svg" alt="Instagram" width="20" height="20">
-      Instagram
+      <img src="/images/instagram.svg" alt="Instagram">
     </a>
     <a href="https://x.com/yourprofile" target="_blank" rel="noopener noreferrer">
-      <img src="/images/x.svg" alt="X (Twitter)" width="20" height="20">
-      X
+      <img src="/images/x.svg" alt="X">
     </a>
   </div>
 
-  <p>NimbleNerdGames &copy; <span id="year"></span></p> |
-  <a href="/privacy/">Privacy Policy</a>
+  <!-- Email subscribe form -->
+  <form class="subscribe-form">
+    <input type="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+
+  <!-- Copyright -->
+  <p>NimbleNerdGames &copy; <span id="year"></span> | 
+    <a href="/privacy/">Privacy Policy</a>
+  </p>
 </footer>
+
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
