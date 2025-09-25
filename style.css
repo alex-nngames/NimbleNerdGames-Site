@@ -49,9 +49,9 @@ a {
 }
 
 .emoji {
-  width: 1em;          /* scale with text size */
+  width: 1em;          /* match text size */
   height: 1em;
-  vertical-align: middle; /* align nicely with text */
+  vertical-align: -0.2em; /* tweak to align better with baseline */
 }
 
 /* Navigation */
