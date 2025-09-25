@@ -55,7 +55,7 @@ p {
 .emoji {
   width: 1em;          /* match text size */
   height: 1em;
-  vertical-align: -0.2em; /* tweak to align better with baseline */
+  vertical-align: middle;
 }
 
 /* Navigation */
