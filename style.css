@@ -105,10 +105,10 @@ footer a:hover {
 /* Main content */
 main {
   display: block;   /* instead of flex centering */
-  text-align: left; /* makes all text inside left aligned */
   margin: 0 auto;
-  max-width: 600px; /* keeps it neat */
-  padding: 2rem;
+  max-width: 600px;
+  padding: 1rem 2rem; /* less top/bottom padding */
+  text-align: left; /* makes all text inside left aligned */
 }
 
 .contact-container,
