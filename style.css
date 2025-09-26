@@ -217,13 +217,13 @@ main {
 
 .app-icon {
   margin: 1.5rem 0;
+  text-align: center; /* Center app icon text */
 }
 
 .coming-soon p {
   font-size: 1rem;
   color: #777;
-  text-align: center !important; /* force center */
-  margin-top: 0.5rem;
+  text-align: center; /* Center text under app icon */
 }
 
 /* ========================
@@ -231,7 +231,7 @@ main {
    ======================== */
 footer {
   background: transparent;
-  text-align: center;
+  text-align: center !important;
   padding: 2rem 1rem;
   color: #666;
   margin-top: 3rem;
@@ -273,10 +273,10 @@ footer .subscribe-form button:hover {
 /* Socials */
 footer .socials {
   display: flex;
-  justify-content: center;
+  justify-content: center !important;
   align-items: center;
   gap: 28px;
-  margin: 2rem 0;
+  margin: 2rem 0 1rem 0;
 }
 
 footer .socials img,
@@ -294,18 +294,24 @@ footer .socials a:hover img {
   opacity: 0.85;
 }
 
-/* Footer bottom */
+/* Footer bottom (force center) */
 .footer-bottom {
-  width: 100%;
-  text-align: center !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column !important;
   margin-top: 1rem;
+  text-align: center !important;
   color: #666;
   font-size: 0.95rem;
 }
 
 .footer-bottom p {
-  margin: 0;
-  display: block !important; /* ensures proper block centering */
+  margin: 0 auto !important;
+  text-align: center !important;
+  display: block !important;
+  width: 100%;
 }
 
 .footer-bottom a {
@@ -319,6 +325,7 @@ footer .socials a:hover img {
   color: #999;
   border-bottom: 1px solid #999;
 }
+
 
 
 
