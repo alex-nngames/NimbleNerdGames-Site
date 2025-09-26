@@ -8,7 +8,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
   <!-- Global CSS -->
   <link rel="stylesheet" href="/style.css">
@@ -16,15 +16,32 @@
 <body>
   <!-- Header -->
   <header>
+    <!-- Hamburger toggle (mobile only) -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Logo -->
     <a href="/" class="site-home-link">
       <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
       <h1 class="site-title">NimbleNerd</h1>
     </a>
+
+    <!-- Desktop nav -->
     <nav>
       <a href="/">Games</a>
       <a href="/contact/">Contact</a>
       <a href="/about/">About</a>
     </nav>
+
+    <!-- Mobile fullscreen nav -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="/">Games</a>
+      <a href="/contact/">Contact</a>
+      <a href="/about/">About</a>
+    </div>
   </header>
 
   <!-- Privacy Policy Content -->
@@ -101,32 +118,48 @@
     </p>
   </main>
 
+  <!-- Footer -->
   <footer>
-  <!-- subscribe form (only here in footer) -->
-  <form class="subscribe-form" action="#" method="post" onsubmit="return false;">
-    <input type="email" name="email" placeholder="Enter your email" required>
-    <button type="submit">Subscribe</button>
-  </form>
+    <form class="subscribe-form" action="#" method="post" onsubmit="return false;">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
 
-  <div class="socials">
-  <a href="https://x.com/yourprofile" target="_blank">
-    <img src="/images/xLogo.svg" alt="X">
-  </a>
-  <a href="https://instagram.com/yourprofile" target="_blank">
-    <img src="/images/instaLogo.svg" alt="Instagram">
-  </a>
-</div>
+    <div class="socials">
+      <a href="https://x.com/yourprofile" target="_blank">
+        <img src="/images/xLogo.svg" alt="X">
+      </a>
+      <a href="https://instagram.com/yourprofile" target="_blank">
+        <img src="/images/instaLogo.svg" alt="Instagram">
+      </a>
+    </div>
 
+    <div class="footer-bottom">
+      <p>NimbleNerdGames &copy; <span id="year"></span> | <a href="/privacy/">Privacy Policy</a></p>
+    </div>
+  </footer>
 
-  <!-- bottom text centered -->
-  <div class="footer-bottom">
-    <p>NimbleNerdGames &copy; <span id="year"></span> | <a href="/privacy/">Privacy Policy</a></p>
-  </div>
-</footer>
-
-
+  <!-- Scripts -->
   <script>
+    // dynamic year
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // mobile nav toggle
+    const toggle = document.getElementById("menu-toggle");
+    const mobileNav = document.getElementById("mobile-nav");
+
+    toggle.addEventListener("click", () => {
+      toggle.classList.toggle("active");
+      mobileNav.classList.toggle("active");
+    });
+
+    // close menu on link click
+    mobileNav.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileNav.classList.remove("active");
+        toggle.classList.remove("active");
+      });
+    });
   </script>
 </body>
 </html>
