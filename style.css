@@ -279,16 +279,16 @@ footer .socials a {
 }
 
 footer .socials img {
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  display: block;
-  transition: opacity 0.3s ease;
+  width: 36px;
+  height: 36px;
+  margin: 0 12px;
+  transition: transform 0.3s ease;
 }
 
 footer .socials img:hover {
-  opacity: 0.6;
+  transform: scale(1.15);
 }
+
 
 .footer-bottom {
   margin-top: 1rem;
