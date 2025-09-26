@@ -278,12 +278,14 @@ footer .socials a {
   display: inline-block;
 }
 
-footer .socials img {
-  width: 36px;
+.socials img {
+  width: 36px;   /* adjust to taste */
   height: 36px;
-  margin: 0 12px;
-  transition: transform 0.3s ease;
+  margin: 0 10px;
+  display: inline-block;
+  vertical-align: middle;
 }
+
 
 footer .socials img:hover {
   transform: scale(1.15);
