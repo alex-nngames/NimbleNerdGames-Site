@@ -222,7 +222,8 @@ main {
 .coming-soon p {
   font-size: 1rem;
   color: #777;
-  text-align: center;
+  text-align: center !important; /* force center */
+  margin-top: 0.5rem;
 }
 
 /* ========================
@@ -230,7 +231,7 @@ main {
    ======================== */
 footer {
   background: transparent;
-  text-align: center !important;
+  text-align: center;
   padding: 2rem 1rem;
   color: #666;
   margin-top: 3rem;
@@ -245,6 +246,7 @@ footer .subscribe-form {
   flex-wrap: wrap;
   align-items: center;
 }
+
 footer .subscribe-form input[type="email"] {
   padding: 10px 14px;
   border-radius: 6px;
@@ -253,6 +255,7 @@ footer .subscribe-form input[type="email"] {
   min-width: 220px;
   max-width: 420px;
 }
+
 footer .subscribe-form button {
   padding: 10px 16px;
   background: #222;
@@ -260,8 +263,12 @@ footer .subscribe-form button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  font-family: 'Inter', sans-serif;
 }
-footer .subscribe-form button:hover { background:#444; }
+
+footer .subscribe-form button:hover {
+  background: #444;
+}
 
 /* Socials */
 footer .socials {
@@ -269,47 +276,49 @@ footer .socials {
   justify-content: center;
   align-items: center;
   gap: 28px;
-  margin: 2rem 0 1.25rem;
+  margin: 2rem 0;
 }
+
 footer .socials img,
 footer .socials svg {
-  width: 44px;  /* larger icons */
-  height: 44px;
+  width: 42px !important;
+  height: 42px !important;
   display: block;
   object-fit: contain;
   transition: transform 0.18s ease, opacity 0.18s ease;
 }
+
 footer .socials a:hover svg,
 footer .socials a:hover img {
   transform: scale(1.12);
   opacity: 0.85;
 }
 
-/* Footer bottom text */
+/* Footer bottom */
 .footer-bottom {
   width: 100%;
-  display: flex;
-  justify-content: center;   /* centers horizontally */
-  align-items: center;
-  margin-top: 0.75rem;
   text-align: center !important;
+  margin-top: 1rem;
   color: #666;
   font-size: 0.95rem;
 }
+
 .footer-bottom p {
-  margin: 0 auto;
-  text-align: center;
-  width: 100%;
+  margin: 0;
+  display: block !important; /* ensures proper block centering */
 }
+
 .footer-bottom a {
   color: #666;
   text-decoration: none;
   border-bottom: 1px dotted #aaa;
   transition: color 0.2s ease, border-bottom 0.2s ease;
 }
+
 .footer-bottom a:hover {
   color: #999;
   border-bottom: 1px solid #999;
 }
+
 
 
