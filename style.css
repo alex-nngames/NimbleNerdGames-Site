@@ -224,6 +224,8 @@ main {
 }
 
 .app-icon img {
+  width: 120px;   /* adjust as needed */
+  height: auto;
   display: block;
   margin: 0 auto;
 }
