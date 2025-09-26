@@ -222,23 +222,23 @@ main {
 .coming-soon p {
   font-size: 1rem;
   color: #777;
+  text-align: center;
 }
 
 /* ========================
-   Footer (clean final)
+   Footer
    ======================== */
 footer {
   background: transparent;
-  text-align: center;
+  text-align: center !important;
   padding: 2rem 1rem;
-  margin-top: 3rem;
   color: #666;
-  font-family: 'Inter', sans-serif;
+  margin-top: 3rem;
 }
 
 /* Subscribe form */
 footer .subscribe-form {
-  margin: 0 auto 2rem;
+  margin: 0 auto 1.75rem;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -247,8 +247,8 @@ footer .subscribe-form {
 }
 footer .subscribe-form input[type="email"] {
   padding: 10px 14px;
-  border: 1px solid #ccc;
   border-radius: 6px;
+  border: 1px solid #ccc;
   font-size: 15px;
   min-width: 220px;
   max-width: 420px;
@@ -259,45 +259,47 @@ footer .subscribe-form button {
   color: #fff;
   border: none;
   border-radius: 8px;
-  font-size: 15px;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
-footer .subscribe-form button:hover {
-  background: #444;
-}
+footer .subscribe-form button:hover { background:#444; }
 
-/* Social icons */
+/* Socials */
 footer .socials {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 28px;
-  margin: 1.75rem 0;
+  margin: 2rem 0 1.25rem;
 }
 footer .socials img,
 footer .socials svg {
-  width: 48px;   /* scaled up */
-  height: 48px;  /* scaled up */
+  width: 44px;  /* larger icons */
+  height: 44px;
   display: block;
   object-fit: contain;
   transition: transform 0.18s ease, opacity 0.18s ease;
 }
-footer .socials a:hover img,
-footer .socials a:hover svg {
-  transform: scale(1.15);
+footer .socials a:hover svg,
+footer .socials a:hover img {
+  transform: scale(1.12);
   opacity: 0.85;
 }
 
 /* Footer bottom text */
 .footer-bottom {
-  margin-top: 1rem;
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;   /* centers horizontally */
+  align-items: center;
+  margin-top: 0.75rem;
+  text-align: center !important;
   color: #666;
   font-size: 0.95rem;
 }
 .footer-bottom p {
-  margin: 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
 }
 .footer-bottom a {
   color: #666;
@@ -309,4 +311,5 @@ footer .socials a:hover svg {
   color: #999;
   border-bottom: 1px solid #999;
 }
+
 
