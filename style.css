@@ -307,36 +307,16 @@ footer .socials img:hover {
 }
 
 /* =========================
-   Center / footer overrides
-   Put this at the END of style.css so it overrides previous rules
+   Footer final overrides
    ========================= */
 
-/* Ensure coming-soon area is centered regardless of global main text-align */
-.games-page .coming-soon,
-.games-page .coming-soon h2,
-.games-page .coming-soon p,
-.games-page .app-icon {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Site header: ensure logo + title are stacked & centered */
-header .site-home-link {
-  display: flex !important;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-}
-
-/* Footer overall */
 footer {
   text-align: center !important;
   padding: 2rem 1rem;
   background: transparent;
 }
 
-/* Footer subscribe form (centered, fixed sizes) */
+/* Subscribe form */
 footer .subscribe-form {
   margin: 0 auto 1.75rem;
   display: flex;
@@ -352,7 +332,6 @@ footer .subscribe-form input[type="email"] {
   font-size: 15px;
   min-width: 220px;
   max-width: 420px;
-  box-sizing: border-box;
 }
 footer .subscribe-form button {
   padding: 10px 16px;
@@ -364,7 +343,7 @@ footer .subscribe-form button {
 }
 footer .subscribe-form button:hover { background:#444; }
 
-/* Social icons row: centered, same size for all icons (SVG or IMG) */
+/* Socials */
 footer .socials {
   display: flex;
   justify-content: center;
@@ -386,9 +365,8 @@ footer .socials a:hover img {
   opacity: 0.85;
 }
 
-/* Footer bottom text centered and full-width */
+/* Footer bottom (force full width & center) */
 .footer-bottom {
-  display: block !important;
   width: 100%;
   text-align: center !important;
   margin-top: 0.75rem;
@@ -397,6 +375,7 @@ footer .socials a:hover img {
 }
 .footer-bottom p {
   margin: 0;
+  display: block !important;   /* override old inline rule */
 }
 .footer-bottom a {
   color: #666;
@@ -408,9 +387,6 @@ footer .socials a:hover img {
   color: #999;
   border-bottom: 1px solid #999;
 }
-
-
-
 
 
 
