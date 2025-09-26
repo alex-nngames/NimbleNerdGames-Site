@@ -8,7 +8,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
   <!-- Global CSS -->
   <link rel="stylesheet" href="/style.css">
@@ -16,8 +16,8 @@
 <body>
   <!-- Header -->
   <header>
-    <!-- Mobile Menu Toggle -->
-    <div class="menu-toggle" id="menuToggle">
+    <!-- Hamburger toggle (mobile only) -->
+    <div class="menu-toggle" id="menu-toggle">
       <span></span>
       <span></span>
       <span></span>
@@ -29,20 +29,20 @@
       <h1 class="site-title">NimbleNerd</h1>
     </a>
 
-    <!-- Desktop Nav -->
+    <!-- Desktop nav -->
     <nav>
       <a href="/">Games</a>
       <a href="/contact/">Contact</a>
       <a href="/about/">About</a>
     </nav>
-  </header>
 
-  <!-- Mobile Fullscreen Nav -->
-  <div class="mobile-nav" id="mobileNav">
-    <a href="/">Games</a>
-    <a href="/contact/">Contact</a>
-    <a href="/about/">About</a>
-  </div>
+    <!-- Mobile fullscreen nav -->
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="/">Games</a>
+      <a href="/contact/">Contact</a>
+      <a href="/about/">About</a>
+    </div>
+  </header>
 
   <!-- Privacy Policy Content -->
   <main class="privacy-policy">
@@ -120,11 +120,17 @@
 
   <!-- Footer -->
   <footer>
-    <form class="subscribe-form" action="#" method="post" onsubmit="return false;">
-      <input type="email" name="email" placeholder="Enter your email" required>
-      <button type="submit">Subscribe</button>
-    </form>
+    <!-- subscribe section -->
+    <div class="newsletter">
+      <h3>NimbleNerd Newsletter</h3>
+      <p>Enter your email address to subscribe to the NimbleNerd Newsletter for my latest updates and news stories.</p>
+      <form class="subscribe-form" action="#" method="post" onsubmit="return false;">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
 
+    <!-- socials -->
     <div class="socials">
       <a href="https://x.com/yourprofile" target="_blank">
         <img src="/images/xLogo.svg" alt="X">
@@ -132,13 +138,16 @@
       <a href="https://instagram.com/yourprofile" target="_blank">
         <img src="/images/instaLogo.svg" alt="Instagram">
       </a>
+      <a href="https://tiktok.com/@yourprofile" target="_blank">
+        <img src="/images/tiktokLogo.svg" alt="TikTok">
+      </a>
+      <a href="https://youtube.com/yourchannel" target="_blank">
+        <img src="/images/youtubeLogo.svg" alt="YouTube">
+      </a>
     </div>
 
     <div class="footer-bottom">
-      <p>
-        NimbleNerdGames &copy; <span id="year"></span> |
-        <a href="/privacy/">Privacy Policy</a>
-      </p>
+      <p>NimbleNerdGames &copy; <span id="year"></span> | <a href="/privacy/">Privacy Policy</a></p>
     </div>
   </footer>
 
@@ -148,11 +157,11 @@
     document.getElementById("year").textContent = new Date().getFullYear();
 
     // mobile nav toggle
-    const menuToggle = document.getElementById("menuToggle");
-    const mobileNav = document.getElementById("mobileNav");
+    const toggle = document.getElementById("menu-toggle");
+    const mobileNav = document.getElementById("mobile-nav");
 
-    menuToggle.addEventListener("click", () => {
-      menuToggle.classList.toggle("active");
+    toggle.addEventListener("click", () => {
+      toggle.classList.toggle("active");
       mobileNav.classList.toggle("active");
     });
 
@@ -160,7 +169,7 @@
     mobileNav.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
         mobileNav.classList.remove("active");
-        menuToggle.classList.remove("active");
+        toggle.classList.remove("active");
       });
     });
   </script>
