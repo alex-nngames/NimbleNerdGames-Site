@@ -361,20 +361,22 @@ footer .socials a:hover img {
    ======================== */
 .newsletter-text {
   text-align: center;
-  margin-bottom: 1.25rem;
+  margin: 0 auto 1.5rem auto;
+  max-width: 600px;   /* keeps the paragraph from stretching too wide */
 }
 
 .newsletter-text h3 {
   font-weight: 700;
   font-size: 1.2rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
   color: #000;
 }
 
 .newsletter-text p {
-  font-size: 0.9rem;
-  color: #777;
+  font-size: 0.95rem;
+  color: #555;
   margin: 0;
+  line-height: 1.4;
 }
 
 
