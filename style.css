@@ -23,7 +23,7 @@ p {
   display: inline-block;
   width: 1em;
   height: 1em;
-  vertical-align: -0.15em; 
+  vertical-align: -0.15em;
   margin-left: 0.25em;
 }
 
@@ -73,6 +73,9 @@ nav a {
   color: #000;
   text-decoration: none;
   transition: color 0.3s ease;
+  font-size: 1.1rem;   /* updated size */
+  font-weight: 600;    /* updated weight */
+  letter-spacing: 0.3px;
 }
 
 nav a:hover {
@@ -217,13 +220,19 @@ main {
 
 .app-icon {
   margin: 1.5rem 0;
-  text-align: center;
+  text-align: center; /* center align wrapper */
 }
 
-.coming-soon p {
+.app-icon img {
+  display: block;
+  margin: 0 auto;
+}
+
+.app-icon p {
+  text-align: center; /* ensure caption is centered */
+  margin-top: 0.5rem;
   font-size: 1rem;
   color: #777;
-  text-align: center;
 }
 
 /* ========================
@@ -231,7 +240,7 @@ main {
    ======================== */
 footer {
   background: transparent;
-  text-align: center !important;
+  text-align: center;
   padding: 2rem 1rem;
   color: #666;
   margin-top: 3rem;
@@ -263,26 +272,25 @@ footer .subscribe-form button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-family: 'Inter', sans-serif;
 }
 
 footer .subscribe-form button:hover {
-  background: #444;
+  background:#444;
 }
 
 /* Socials */
 footer .socials {
   display: flex;
-  justify-content: center !important;
+  justify-content: center;
   align-items: center;
   gap: 28px;
-  margin: 2rem 0 1rem 0;
+  margin: 1.75rem 0;
 }
 
 footer .socials img,
 footer .socials svg {
-  width: 42px !important;
-  height: 42px !important;
+  width: 40px !important;
+  height: 40px !important;
   display: block;
   object-fit: contain;
   transition: transform 0.18s ease, opacity 0.18s ease;
@@ -290,25 +298,23 @@ footer .socials svg {
 
 footer .socials a:hover svg,
 footer .socials a:hover img {
-  transform: scale(1.12);
+  transform: scale(1.15);
   opacity: 0.85;
 }
 
-/* Footer bottom - hard center */
+/* Footer bottom */
 .footer-bottom {
-  width: 100% !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
+  width: 100%;
   text-align: center !important;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
+  color: #666;
+  font-size: 0.95rem;
 }
 
 .footer-bottom p {
-  margin: 0 auto !important;
-  text-align: center !important;
-  font-size: 0.95rem;
-  color: #666;
+  margin: 0;
+  display: block;
+  text-align: center; /* force center align */
 }
 
 .footer-bottom a {
@@ -322,8 +328,6 @@ footer .socials a:hover img {
   color: #999;
   border-bottom: 1px solid #999;
 }
-
-
 
 
 
