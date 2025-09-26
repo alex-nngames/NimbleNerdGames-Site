@@ -8,7 +8,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- Global CSS -->
   <link rel="stylesheet" href="/style.css">
@@ -16,8 +16,8 @@
 <body>
   <!-- Header -->
   <header>
-    <!-- Hamburger toggle (mobile only) -->
-    <div class="menu-toggle" id="menu-toggle">
+    <!-- Mobile Menu Toggle -->
+    <div class="menu-toggle" id="menuToggle">
       <span></span>
       <span></span>
       <span></span>
@@ -29,20 +29,20 @@
       <h1 class="site-title">NimbleNerd</h1>
     </a>
 
-    <!-- Desktop nav -->
+    <!-- Desktop Nav -->
     <nav>
       <a href="/">Games</a>
       <a href="/contact/">Contact</a>
       <a href="/about/">About</a>
     </nav>
-
-    <!-- Mobile fullscreen nav -->
-    <div class="mobile-nav" id="mobile-nav">
-      <a href="/">Games</a>
-      <a href="/contact/">Contact</a>
-      <a href="/about/">About</a>
-    </div>
   </header>
+
+  <!-- Mobile Fullscreen Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/">Games</a>
+    <a href="/contact/">Contact</a>
+    <a href="/about/">About</a>
+  </div>
 
   <!-- Privacy Policy Content -->
   <main class="privacy-policy">
@@ -135,7 +135,10 @@
     </div>
 
     <div class="footer-bottom">
-      <p>NimbleNerdGames &copy; <span id="year"></span> | <a href="/privacy/">Privacy Policy</a></p>
+      <p>
+        NimbleNerdGames &copy; <span id="year"></span> |
+        <a href="/privacy/">Privacy Policy</a>
+      </p>
     </div>
   </footer>
 
@@ -145,11 +148,11 @@
     document.getElementById("year").textContent = new Date().getFullYear();
 
     // mobile nav toggle
-    const toggle = document.getElementById("menu-toggle");
-    const mobileNav = document.getElementById("mobile-nav");
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileNav = document.getElementById("mobileNav");
 
-    toggle.addEventListener("click", () => {
-      toggle.classList.toggle("active");
+    menuToggle.addEventListener("click", () => {
+      menuToggle.classList.toggle("active");
       mobileNav.classList.toggle("active");
     });
 
@@ -157,12 +160,13 @@
     mobileNav.querySelectorAll("a").forEach(link => {
       link.addEventListener("click", () => {
         mobileNav.classList.remove("active");
-        toggle.classList.remove("active");
+        menuToggle.classList.remove("active");
       });
     });
   </script>
 </body>
 </html>
+
 
 
 
