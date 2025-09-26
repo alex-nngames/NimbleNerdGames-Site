@@ -281,6 +281,27 @@ footer {
   color: #666;
 }
 
+/* Newsletter Text */
+.newsletter-text {
+  text-align: left;               /* left align text */
+  margin: 0 auto 1.25rem auto;
+  max-width: 420px;               /* match the form input width */
+}
+
+.newsletter-text h3 {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+  color: #000;
+}
+
+.newsletter-text p {
+  font-size: 0.9rem;
+  color: #999;
+  margin: 0;
+  line-height: 1.4;
+}
+
 /* Subscribe form */
 footer .subscribe-form {
   margin: 0 auto 1.75rem;
@@ -355,30 +376,6 @@ footer .socials a:hover img {
   color: #999;
   border-bottom: 1px solid #999;
 }
-
-/* ========================
-   Newsletter Text
-   ======================== */
-.newsletter-text {
-  text-align: center;
-  margin: 0 auto 1.5rem auto;
-  max-width: 600px;   /* keeps the paragraph from stretching too wide */
-}
-
-.newsletter-text h3 {
-  font-weight: 700;
-  font-size: 1.2rem;
-  margin-bottom: 0.4rem;
-  color: #000;
-}
-
-.newsletter-text p {
-  font-size: 0.95rem;
-  color: #555;
-  margin: 0;
-  line-height: 1.4;
-}
-
 
 /* ========================
    Responsive
