@@ -29,15 +29,6 @@
 
   <!-- Page content -->
   <main class="games-page">
-    <!-- Subscribe Section -->
-    <section class="subscribe-section">
-      <p>Join my mailing list to get notified about updates and my new game releases</p>
-      <form class="subscribe-form">
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
-    </section>
-
     <!-- Coming Soon Section -->
     <section class="coming-soon">
       <h2>Something puzzling is on the horizon. It's coming soon, so keep watching!</h2>
@@ -53,35 +44,33 @@
   </main>
 
   <footer>
-  <!-- Subscribe form (only keep this one) -->
-  <form class="subscribe-form">
-    <input type="email" placeholder="Your email" required>
-    <button type="submit">Subscribe</button>
-  </form>
+    <!-- Subscribe form (only keep this one) -->
+    <div class="subscribe-section">
+      <p>Join my mailing list to get notified about updates and my new game releases</p>
+      <form class="subscribe-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
 
-  <!-- Social icons -->
-  <div class="socials">
-    <a href="https://twitter.com/yourprofile" target="_blank">
-      <img src="/images/twitter.svg" alt="Twitter">
-    </a>
-    <a href="https://instagram.com/yourprofile" target="_blank">
-      <img src="/images/instagram.svg" alt="Instagram">
-    </a>
-  </div>
+    <!-- Social icons -->
+    <div class="socials">
+      <a href="https://twitter.com/yourprofile" target="_blank">
+        <img src="/images/twitter.svg" alt="Twitter">
+      </a>
+      <a href="https://instagram.com/yourprofile" target="_blank">
+        <img src="/images/instagram.svg" alt="Instagram">
+      </a>
+    </div>
 
-  <!-- Footer text -->
-  <div class="footer-bottom">
-    <p>NimbleNerdGames &copy; <span id="year"></span> | <a href="/privacy/">Privacy Policy</a></p>
-  </div>
-</footer>
-
-
-
+    <!-- Footer text -->
+    <div class="footer-bottom">
+      <p>NimbleNerdGames &copy; <span id="year"></span> | <a href="/privacy/">Privacy Policy</a></p>
+    </div>
+  </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
-
