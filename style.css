@@ -306,6 +306,110 @@ footer .socials img:hover {
   color: #999;
 }
 
+/* =========================
+   Center / footer overrides
+   Put this at the END of style.css so it overrides previous rules
+   ========================= */
+
+/* Ensure coming-soon area is centered regardless of global main text-align */
+.games-page .coming-soon,
+.games-page .coming-soon h2,
+.games-page .coming-soon p,
+.games-page .app-icon {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Site header: ensure logo + title are stacked & centered */
+header .site-home-link {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* Footer overall */
+footer {
+  text-align: center !important;
+  padding: 2rem 1rem;
+  background: transparent;
+}
+
+/* Footer subscribe form (centered, fixed sizes) */
+footer .subscribe-form {
+  margin: 0 auto 1.75rem;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+footer .subscribe-form input[type="email"] {
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  min-width: 220px;
+  max-width: 420px;
+  box-sizing: border-box;
+}
+footer .subscribe-form button {
+  padding: 10px 16px;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+footer .subscribe-form button:hover { background:#444; }
+
+/* Social icons row: centered, same size for all icons (SVG or IMG) */
+footer .socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin: 1.5rem 0;
+}
+footer .socials img,
+footer .socials svg {
+  width: 36px !important;
+  height: 36px !important;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+footer .socials a:hover svg,
+footer .socials a:hover img {
+  transform: scale(1.12);
+  opacity: 0.85;
+}
+
+/* Footer bottom text centered and full-width */
+.footer-bottom {
+  display: block !important;
+  width: 100%;
+  text-align: center !important;
+  margin-top: 0.75rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+.footer-bottom p {
+  margin: 0;
+}
+.footer-bottom a {
+  color: #666;
+  text-decoration: none;
+  border-bottom: 1px dotted #aaa;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+.footer-bottom a:hover {
+  color: #999;
+  border-bottom: 1px solid #999;
+}
+
+
 
 
 
