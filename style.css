@@ -23,7 +23,7 @@ p {
   display: inline-block;
   width: 1em;
   height: 1em;
-  vertical-align: -0.15em;
+  vertical-align: -0.15em; 
   margin-left: 0.25em;
 }
 
@@ -72,10 +72,9 @@ nav {
 nav a {
   color: #000;
   text-decoration: none;
-  transition: color 0.3s ease;
-  font-size: 1.15rem;   /* slightly larger */
+  font-size: 1.1rem;    /* slightly bigger */
   font-weight: 400;     /* thinner weight */
-  letter-spacing: 0.3px;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -87,7 +86,16 @@ nav a:hover {
    ======================== */
 .contact-container {
   max-width: 600px;
+  margin: 0 auto;
   padding: 20px;
+
+  /* vertical + horizontal centering */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
   text-align: left;
 }
 
@@ -106,12 +114,48 @@ nav a:hover {
 }
 
 /* ========================
+   About Page
+   ======================== */
+.about-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  /* vertical + horizontal centering */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  text-align: left;
+  line-height: 1.6;
+}
+
+.about-container h2 {
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
+.about-container p {
+  margin-bottom: 1.25rem;
+}
+
+/* ========================
    Privacy Policy
    ======================== */
 .privacy-policy {
   max-width: 700px;
   margin: 0 auto;
   padding: 2rem;
+
+  /* vertical + horizontal centering */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
   text-align: left;
   line-height: 1.6;
 }
@@ -220,21 +264,13 @@ main {
 
 .app-icon {
   margin: 1.5rem 0;
-  text-align: center; /* center align wrapper */
+  text-align: center; /* center the app icon */
 }
 
-.app-icon img {
-  width: 120px;   /* adjust as needed */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.app-icon p {
-  text-align: center; /* ensure caption is centered */
-  margin-top: 0.5rem;
+.coming-soon p {
   font-size: 1rem;
   color: #777;
+  text-align: center; /* center text under app icon */
 }
 
 /* ========================
@@ -248,51 +284,53 @@ footer {
   margin-top: 3rem;
 }
 
-/* Subscribe form */
 footer .subscribe-form {
-  margin: 0 auto 1.75rem;
+  margin: 0 auto 2rem auto;
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
-  align-items: center;
 }
 
-footer .subscribe-form input[type="email"] {
-  padding: 10px 14px;
-  border-radius: 6px;
+footer .subscribe-form input {
+  padding: 8px 12px;
   border: 1px solid #ccc;
-  font-size: 15px;
-  min-width: 220px;
-  max-width: 420px;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
 }
 
 footer .subscribe-form button {
-  padding: 10px 16px;
-  background: #222;
-  color: #fff;
+  padding: 8px 16px;
+  background: #333;
+  color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 footer .subscribe-form button:hover {
-  background:#444;
+  background: #555;
 }
 
-/* Socials */
 footer .socials {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 28px;
-  margin: 1.75rem 0;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+footer .socials a {
+  display: inline-block;
 }
 
 footer .socials img,
 footer .socials svg {
-  width: 40px !important;
-  height: 40px !important;
+  width: 42px !important;
+  height: 42px !important;
   display: block;
   object-fit: contain;
   transition: transform 0.18s ease, opacity 0.18s ease;
@@ -300,23 +338,21 @@ footer .socials svg {
 
 footer .socials a:hover svg,
 footer .socials a:hover img {
-  transform: scale(1.15);
+  transform: scale(1.12);
   opacity: 0.85;
 }
 
-/* Footer bottom */
 .footer-bottom {
   width: 100%;
   text-align: center !important;
-  margin-top: 1.25rem;
+  margin-top: 0.75rem;
   color: #666;
   font-size: 0.95rem;
 }
 
 .footer-bottom p {
   margin: 0;
-  display: block;
-  text-align: center; /* force center align */
+  display: block !important;
 }
 
 .footer-bottom a {
@@ -330,6 +366,7 @@ footer .socials a:hover img {
   color: #999;
   border-bottom: 1px solid #999;
 }
+
 
 
 
