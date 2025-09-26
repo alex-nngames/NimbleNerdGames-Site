@@ -7,7 +7,7 @@ body {
   font-family: 'Inter', Arial, sans-serif;
   line-height: 1.5;
   color: #111;
-  background: #fff; /* ensures background stays white */
+  background: #fff;
 }
 
 a {
@@ -217,13 +217,13 @@ main {
 
 .app-icon {
   margin: 1.5rem 0;
-  text-align: center; /* Center app icon text */
+  text-align: center;
 }
 
 .coming-soon p {
   font-size: 1rem;
   color: #777;
-  text-align: center; /* Center text under app icon */
+  text-align: center;
 }
 
 /* ========================
@@ -294,24 +294,21 @@ footer .socials a:hover img {
   opacity: 0.85;
 }
 
-/* Footer bottom (force center) */
+/* Footer bottom - hard center */
 .footer-bottom {
   width: 100% !important;
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  flex-direction: column !important;
-  margin-top: 1rem;
   text-align: center !important;
-  color: #666;
-  font-size: 0.95rem;
+  margin-top: 1rem;
 }
 
 .footer-bottom p {
   margin: 0 auto !important;
   text-align: center !important;
-  display: block !important;
-  width: 100%;
+  font-size: 0.95rem;
+  color: #666;
 }
 
 .footer-bottom a {
@@ -325,6 +322,7 @@ footer .socials a:hover img {
   color: #999;
   border-bottom: 1px solid #999;
 }
+
 
 
 
