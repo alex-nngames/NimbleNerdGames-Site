@@ -258,7 +258,7 @@ footer .subscribe-form button {
   background: #222;
   color: #fff;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 15px;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -272,20 +272,20 @@ footer .socials {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  gap: 28px;
   margin: 1.75rem 0;
 }
 footer .socials img,
 footer .socials svg {
-  width: 36px;
-  height: 36px;
+  width: 48px;   /* scaled up */
+  height: 48px;  /* scaled up */
   display: block;
   object-fit: contain;
   transition: transform 0.18s ease, opacity 0.18s ease;
 }
 footer .socials a:hover img,
 footer .socials a:hover svg {
-  transform: scale(1.12);
+  transform: scale(1.15);
   opacity: 0.85;
 }
 
@@ -294,7 +294,7 @@ footer .socials a:hover svg {
   margin-top: 1rem;
   text-align: center;
   color: #666;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 .footer-bottom p {
   margin: 0;
@@ -309,3 +309,4 @@ footer .socials a:hover svg {
   color: #999;
   border-bottom: 1px solid #999;
 }
+
