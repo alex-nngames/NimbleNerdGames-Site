@@ -38,9 +38,25 @@
 
     <!-- Mobile fullscreen nav -->
     <div class="mobile-nav" id="mobile-nav">
-      <a href="/">Games</a>
-      <a href="/contact/">Contact</a>
-      <a href="/about/">About</a>
+      <div class="mobile-nav-top">
+        <a href="/" class="site-home-link">
+          <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
+          <h1 class="site-title">NimbleNerd</h1>
+        </a>
+      </div>
+
+      <nav class="mobile-links">
+        <a href="/">Games</a>
+        <a href="/contact/">Contact</a>
+        <a href="/about/">About</a>
+      </nav>
+
+      <div class="mobile-socials">
+        <a href="https://x.com/yourprofile" target="_blank"><img src="/images/xLogo.svg" alt="X"></a>
+        <a href="https://instagram.com/yourprofile" target="_blank"><img src="/images/instaLogo.svg" alt="Instagram"></a>
+        <a href="https://tiktok.com/@yourprofile" target="_blank"><img src="/images/tiktokLogo.svg" alt="TikTok"></a>
+        <a href="https://youtube.com/yourchannel" target="_blank"><img src="/images/youtubeLogo.svg" alt="YouTube"></a>
+      </div>
     </div>
   </header>
 
@@ -107,27 +123,11 @@
   <script>
     // dynamic year
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // mobile nav toggle
-    const toggle = document.getElementById("menu-toggle");
-    const mobileNav = document.getElementById("mobile-nav");
-
-    toggle.addEventListener("click", () => {
-      toggle.classList.toggle("active");
-      mobileNav.classList.toggle("active");
-    });
-
-    // close menu on link click
-    mobileNav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        mobileNav.classList.remove("active");
-        toggle.classList.remove("active");
-      });
-    });
   </script>
   <script src="/js/nav.js"></script>
 </body>
 </html>
+
 
 
 
