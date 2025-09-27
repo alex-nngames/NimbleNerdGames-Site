@@ -23,7 +23,7 @@ p {
   display: inline-block;
   width: 1em;
   height: 1em;
-  vertical-align: -0.15em; 
+  vertical-align: -0.15em;
   margin-left: 0.25em;
 }
 
@@ -47,16 +47,16 @@ header {
 }
 
 .site-title {
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 700;
+  margin-top: 0.5rem;
   color: #000;
-  margin: 0.4rem 0 0;
 }
 
 .site-logo {
   display: block;
   margin: 0 auto 10px auto;
-  max-width: 120px;
+  max-width: 140px;
   height: auto;
 }
 
@@ -69,9 +69,8 @@ nav {
 
 nav a {
   color: #000;
-  text-decoration: none;
   font-size: 1.05rem;
-  font-weight: 300;
+  font-weight: 400;
   transition: color 0.3s ease;
 }
 
@@ -92,7 +91,7 @@ nav a:hover {
   position: absolute;
   top: 20px;
   left: 20px;
-  z-index: 1001;
+  z-index: 1100;
 }
 
 .menu-toggle span {
@@ -104,6 +103,7 @@ nav a:hover {
   transition: all 0.3s ease;
 }
 
+/* Animate hamburger into X */
 .menu-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -126,15 +126,14 @@ nav a:hover {
   background: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  padding-top: 60px;
-  z-index: 1000;
-
+  gap: 3rem;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.4s ease, visibility 0.4s ease;
+  z-index: 1000;
 }
 
 .mobile-nav.active {
@@ -143,19 +142,19 @@ nav a:hover {
   pointer-events: auto;
 }
 
-.mobile-nav-top {
-  text-align: center;
-  margin-bottom: 40px;
+.mobile-nav.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
-.mobile-nav-top .site-logo {
-  max-width: 120px;
-  margin: 0 auto 10px auto;
+.mobile-nav .site-logo {
+  max-width: 160px;
+  margin-bottom: 10px;
 }
 
-.mobile-nav-top .site-title {
-  font-size: 1.6rem;
-  font-weight: 700;
+.mobile-nav .site-title {
+  font-size: 2.2rem;
   margin: 0;
 }
 
@@ -164,13 +163,11 @@ nav a:hover {
   flex-direction: column;
   gap: 1.8rem;
   align-items: center;
-  margin-bottom: 40px;
 }
 
 .mobile-links a {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 300;
-  text-decoration: none;
   color: #000;
   transition: color 0.3s ease;
 }
@@ -181,17 +178,14 @@ nav a:hover {
 
 .mobile-socials {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 32px;
+  gap: 28px;
+  margin-top: 2rem;
 }
 
 .mobile-socials img {
-  width: 50px;
-  height: 50px;
-  display: block;
-  object-fit: contain;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  width: 56px;
+  height: 56px;
+  transition: transform 0.18s ease, opacity 0.18s ease;
 }
 
 .mobile-socials a:hover img {
@@ -210,53 +204,15 @@ main {
   text-align: left;
 }
 
-/* Contact / About / Privacy */
+/* Containers */
 .contact-container,
 .about-container,
 .privacy-policy {
   max-width: 700px;
   margin: 0 auto;
   padding: 2rem 1rem;
+  text-align: left;
   line-height: 1.6;
-}
-
-.contact-container h2,
-.about-container h2,
-.privacy-policy h2,
-.privacy-policy h3,
-.privacy-policy h4 {
-  font-weight: 600;
-  margin-top: 2rem;
-}
-
-.contact-container p,
-.about-container p,
-.privacy-policy p,
-.privacy-policy ul {
-  margin-bottom: 1.5rem;
-  font-weight: 400;
-}
-
-.contact-container .email,
-.privacy-policy .email {
-  font-weight: 700;
-  color: #000;
-}
-
-.privacy-policy ul {
-  padding-left: 1.5rem;
-}
-
-.privacy-policy a {
-  color: #000;
-  text-decoration: none;
-  border-bottom: 1px dotted #aaa;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
-}
-
-.privacy-policy a:hover {
-  color: #555;
-  border-bottom: 1px solid #555;
 }
 
 /* ========================
@@ -270,15 +226,14 @@ main {
 }
 
 .coming-soon h2 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #999;
+  font-size: 1.3rem;
+  font-weight: 600;
   margin-bottom: 1.5rem;
+  color: #000;
 }
 
 .app-icon {
   margin: 1.5rem 0;
-  text-align: center;
 }
 
 .app-icon img {
@@ -291,7 +246,6 @@ main {
 .coming-soon p {
   font-size: 1rem;
   color: #777;
-  text-align: center;
 }
 
 /* ========================
@@ -300,11 +254,10 @@ main {
 footer {
   text-align: center;
   padding: 2rem 1rem;
-  background: transparent;
-  margin-top: 2rem;
   color: #666;
 }
 
+/* Newsletter */
 .newsletter-text {
   text-align: left;
   margin: 0 auto 1.25rem auto;
@@ -321,20 +274,18 @@ footer {
 .newsletter-text p {
   font-size: 0.9rem;
   color: #999;
-  margin: 0;
-  line-height: 1.4;
 }
 
-footer .subscribe-form {
-  margin: 0 auto 1.75rem;
+/* Subscribe */
+.subscribe-form {
   display: flex;
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  align-items: center;
+  margin-bottom: 1.75rem;
 }
 
-footer .subscribe-form input[type="email"] {
+.subscribe-form input[type="email"] {
   padding: 10px 14px;
   border-radius: 6px;
   border: 1px solid #ccc;
@@ -343,18 +294,20 @@ footer .subscribe-form input[type="email"] {
   max-width: 420px;
 }
 
-footer .subscribe-form button {
+.subscribe-form button {
   padding: 10px 16px;
-  background: #222;
+  background: #000;
   color: #fff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
 }
-footer .subscribe-form button:hover {
+
+.subscribe-form button:hover {
   background: #444;
 }
 
+/* Socials (footer) */
 footer .socials {
   display: flex;
   justify-content: center;
@@ -362,34 +315,30 @@ footer .socials {
   gap: 28px;
   margin: 1.5rem 0;
 }
+
 footer .socials img {
-  width: 42px !important;
-  height: 42px !important;
-  object-fit: contain;
+  width: 42px;
+  height: 42px;
   transition: transform 0.18s ease, opacity 0.18s ease;
 }
+
 footer .socials a:hover img {
   transform: scale(1.12);
   opacity: 0.85;
 }
 
+/* Footer bottom */
 .footer-bottom {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 1rem;
-  text-align: center;
+  font-size: 0.9rem;
   color: #666;
-  font-size: 0.95rem;
 }
+
 .footer-bottom a {
   color: #666;
-  text-decoration: none;
-  margin-left: 6px;
   border-bottom: 1px dotted #aaa;
-  transition: color 0.2s ease, border-bottom 0.2s ease;
 }
+
 .footer-bottom a:hover {
   color: #999;
   border-bottom: 1px solid #999;
@@ -405,9 +354,6 @@ footer .socials a:hover img {
   .menu-toggle {
     display: flex;
   }
-  main {
-    padding: 1.5rem 1rem;
-  }
 }
 
 @media (min-width: 769px) {
@@ -415,6 +361,7 @@ footer .socials a:hover img {
     display: none !important;
   }
 }
+
 
 
 
