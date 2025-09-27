@@ -38,14 +38,13 @@
 
     <!-- Mobile fullscreen nav -->
     <div class="mobile-nav" id="mobile-nav">
-      <!-- Close button -->
-      <button id="close-btn" aria-label="Close menu">&times;</button>
-
-      <!-- Logo + title inside overlay -->
-      <a href="/" class="site-home-link">
-        <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
-        <h1 class="site-title">NimbleNerd</h1>
-      </a>
+      <!-- Logo + title (same size as main page) -->
+      <div class="mobile-nav-top">
+        <a href="/" class="site-home-link">
+          <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
+          <h1 class="site-title">NimbleNerd</h1>
+        </a>
+      </div>
 
       <!-- Overlay nav links -->
       <nav class="mobile-links">
@@ -54,8 +53,8 @@
         <a href="/about/">About</a>
       </nav>
 
-      <!-- Socials inside overlay -->
-      <div class="socials overlay-socials">
+      <!-- Socials inside overlay (horizontal row) -->
+      <div class="mobile-socials">
         <a href="https://x.com/yourprofile" target="_blank"><img src="/images/xLogo.svg" alt="X"></a>
         <a href="https://instagram.com/yourprofile" target="_blank"><img src="/images/instaLogo.svg" alt="Instagram"></a>
         <a href="https://tiktok.com/@yourprofile" target="_blank"><img src="/images/tiktokLogo.svg" alt="TikTok"></a>
@@ -100,13 +99,14 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="/nav.js"></script>
+  <script src="/js/nav.js"></script>
   <script>
     // dynamic year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
+
 
 
 
