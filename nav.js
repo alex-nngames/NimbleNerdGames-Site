@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Close when clicking a nav link
+  // Close when clicking a nav link inside overlay
   mobileNav.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", closeMenu);
   });
@@ -30,13 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileNav.classList.add("fade-out");
     toggle.classList.remove("active");
 
-    // remove fade-out after transition
+    // Ensure fade-out is cleared after transition (matches CSS timing)
     setTimeout(() => {
       mobileNav.classList.remove("fade-out");
     }, 400);
   }
 });
-
-
-
 
