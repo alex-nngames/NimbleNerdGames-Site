@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Close when clicking a nav link inside overlay
+  // Close when clicking a nav link
   mobileNav.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", closeMenu);
   });
@@ -22,18 +22,19 @@ document.addEventListener("DOMContentLoaded", () => {
   function openMenu() {
     mobileNav.classList.add("active");
     mobileNav.classList.remove("fade-out");
-    toggle.classList.add("active");
+    toggle.classList.add("active"); // animate hamburger → X
   }
 
   function closeMenu() {
     mobileNav.classList.remove("active");
     mobileNav.classList.add("fade-out");
-    toggle.classList.remove("active");
+    toggle.classList.remove("active"); // back to hamburger
 
-    // Ensure fade-out is cleared after transition (matches CSS timing)
+    // remove fade-out after transition ends
     setTimeout(() => {
       mobileNav.classList.remove("fade-out");
-    }, 400);
+    }, 400); // match your CSS transition
   }
 });
+
 
