@@ -8,7 +8,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
   <!-- Global CSS -->
   <link rel="stylesheet" href="/style.css">
@@ -16,46 +16,37 @@
 <body>
   <!-- Header -->
   <header>
-    <!-- Hamburger toggle (mobile only) -->
     <div class="menu-toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </div>
 
-    <!-- Logo + Title -->
     <a href="/" class="site-home-link">
       <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
       <h1 class="site-title">NimbleNerd</h1>
     </a>
 
-    <!-- Desktop nav -->
     <nav>
       <a href="/">Games</a>
       <a href="/contact/">Contact</a>
       <a href="/about/">About</a>
     </nav>
 
-    <!-- Mobile fullscreen nav -->
+    <!-- Mobile overlay nav -->
     <div class="mobile-nav" id="mobile-nav">
-      <!-- Close button -->
-      <button id="close-btn" aria-label="Close menu">&times;</button>
+      <div class="mobile-nav-top">
+        <a href="/" class="site-home-link">
+          <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
+          <h1 class="site-title">NimbleNerd</h1>
+        </a>
+      </div>
 
-      <!-- Logo + title -->
-      <a href="/" class="site-home-link">
-        <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
-        <h1 class="site-title">NimbleNerd</h1>
-      </a>
-
-      <!-- Overlay nav links -->
       <nav class="mobile-links">
         <a href="/">Games</a>
         <a href="/contact/">Contact</a>
         <a href="/about/">About</a>
       </nav>
 
-      <!-- Overlay socials -->
-      <div class="socials overlay-socials">
+      <div class="mobile-socials">
         <a href="https://x.com/yourprofile" target="_blank"><img src="/images/xLogo.svg" alt="X"></a>
         <a href="https://instagram.com/yourprofile" target="_blank"><img src="/images/instaLogo.svg" alt="Instagram"></a>
         <a href="https://tiktok.com/@yourprofile" target="_blank"><img src="/images/tiktokLogo.svg" alt="TikTok"></a>
@@ -64,20 +55,20 @@
     </div>
   </header>
 
-  <!-- Page content -->
+  <!-- About Page Content -->
   <main>
     <div class="about-container">
       <h2>Alex Cockcroft</h2>
       <p>
-        I'm an indie game developer from Leeds, UK, fuelled 
-        by creativity and a passion for crafting unforgettable 
-        games. Designing and bringing ideas to life on screen 
-        is a joy for me, and I'm always striving for perfection 
+        I'm an indie game developer from Leeds, UK, fuelled
+        by creativity and a passion for crafting unforgettable
+        games. Designing and bringing ideas to life on screen
+        is a joy for me, and I'm always striving for perfection
         in every project.
       </p>
       <p>
-        My journey began on my 19th birthday with my first 
-        iPod Touch—after hours of playing, I knew I wanted 
+        My journey began on my 19th birthday with my first
+        iPod Touch—after hours of playing, I knew I wanted
         to build my own mobile games.
       </p>
       <h2>Support My Work</h2>
@@ -85,8 +76,8 @@
         Your support helps me carve out more time to create
         fun, polished experiences that I hope bring you joy.
         If you’d like to support my journey, you can donate through
-        PayPal or Buy Me a Coffee, and while I may not drink coffee, 
-        I’ll happily raise a mug of hot chocolate in thanks 
+        PayPal or Buy Me a Coffee, and while I may not drink coffee,
+        I’ll happily raise a mug of hot chocolate in thanks
         <img src="/images/Hot Chocolate Emoji.svg" alt="hot chocolate emoji" class="emoji">.
       </p>
       <p>
@@ -98,26 +89,20 @@
 
   <!-- Footer -->
   <footer>
-    <div class="footer-newsletter">
-      <div class="newsletter-text">
-        <h3>NimbleNerd Newsletter</h3>
-        <p>Enter your email address to subscribe to the NimbleNerd<br>
-          Newsletter for my latest updates and news stories.</p>
-      </div>
-
-      <form class="subscribe-form" action="#" method="post" onsubmit="return false;">
-        <input type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
+    <div class="newsletter-text">
+      <h3>NimbleNerd Newsletter</h3>
+      <p>Enter your email address to subscribe to the NimbleNerd Newsletter for my latest updates and news stories.</p>
     </div>
-
+    <form class="subscribe-form" action="#" method="post" onsubmit="return false;">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
     <div class="socials">
       <a href="https://x.com/yourprofile" target="_blank"><img src="/images/xLogo.svg" alt="X"></a>
       <a href="https://instagram.com/yourprofile" target="_blank"><img src="/images/instaLogo.svg" alt="Instagram"></a>
       <a href="https://tiktok.com/@yourprofile" target="_blank"><img src="/images/tiktokLogo.svg" alt="TikTok"></a>
       <a href="https://youtube.com/yourchannel" target="_blank"><img src="/images/youtubeLogo.svg" alt="YouTube"></a>
     </div>
-
     <div class="footer-bottom">
       <p>NimbleNerdGames &copy; <span id="year"></span> | <a href="/privacy/">Privacy Policy</a></p>
     </div>
@@ -125,12 +110,12 @@
 
   <!-- Scripts -->
   <script>
-    // dynamic year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-  <script src="/nav.js"></script>
+  <script src="/js/nav.js"></script>
 </body>
 </html>
+
 
 
 
