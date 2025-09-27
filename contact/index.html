@@ -4,13 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact – NimbleNerdGames</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-  <!-- Global CSS -->
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -19,19 +12,15 @@
     <div class="menu-toggle" id="menu-toggle">
       <span></span><span></span><span></span>
     </div>
-
     <a href="/" class="site-home-link">
       <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
       <h1 class="site-title">NimbleNerd</h1>
     </a>
-
     <nav>
       <a href="/">Games</a>
       <a href="/contact/">Contact</a>
       <a href="/about/">About</a>
     </nav>
-
-    <!-- Mobile overlay nav -->
     <div class="mobile-nav" id="mobile-nav">
       <div class="mobile-nav-top">
         <a href="/" class="site-home-link">
@@ -39,13 +28,11 @@
           <h1 class="site-title">NimbleNerd</h1>
         </a>
       </div>
-
       <nav class="mobile-links">
         <a href="/">Games</a>
         <a href="/contact/">Contact</a>
         <a href="/about/">About</a>
       </nav>
-
       <div class="mobile-socials">
         <a href="https://x.com/yourprofile" target="_blank"><img src="/images/xLogo.svg" alt="X"></a>
         <a href="https://instagram.com/yourprofile" target="_blank"><img src="/images/instaLogo.svg" alt="Instagram"></a>
@@ -55,20 +42,13 @@
     </div>
   </header>
 
-  <!-- Contact Page Content -->
+  <!-- Main -->
   <main>
     <div class="contact-container">
       <h2>General Enquiries</h2>
-      <p>
-        For all press and general enquiries, please contact
-        <span class="email">alex@nimblenerdgames.com</span>
-      </p>
-
+      <p>For all press and general enquiries, please contact <span class="email">alex@nimblenerdgames.com</span></p>
       <h2>Game Support</h2>
-      <p>
-        Looking for technical support? Contact us at
-        <span class="email">support@nimblenerdgames.com</span>
-      </p>
+      <p>Looking for technical support? Contact us at <span class="email">support@nimblenerdgames.com</span></p>
     </div>
   </main>
 
@@ -78,7 +58,7 @@
       <h3>NimbleNerd Newsletter</h3>
       <p>Enter your email address to subscribe to the NimbleNerd Newsletter for my latest updates and news stories.</p>
     </div>
-    <form class="subscribe-form" action="#" method="post" onsubmit="return false;">
+    <form class="subscribe-form">
       <input type="email" name="email" placeholder="Enter your email" required>
       <button type="submit">Subscribe</button>
     </form>
@@ -93,13 +73,13 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
   <script src="/js/nav.js"></script>
 </body>
 </html>
+
 
 
 
