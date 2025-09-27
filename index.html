@@ -4,23 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Games – NimbleNerdGames</title>
-
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-
-  <!-- Global CSS -->
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
   <!-- Header -->
   <header>
-    <!-- Hamburger toggle (mobile only) -->
+    <!-- Hamburger -->
     <div class="menu-toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </div>
 
     <!-- Logo + title -->
@@ -36,24 +27,19 @@
       <a href="/about/">About</a>
     </nav>
 
-    <!-- Mobile fullscreen nav -->
+    <!-- Mobile nav -->
     <div class="mobile-nav" id="mobile-nav">
-      <!-- Logo + title (same size as main page) -->
       <div class="mobile-nav-top">
         <a href="/" class="site-home-link">
           <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
           <h1 class="site-title">NimbleNerd</h1>
         </a>
       </div>
-
-      <!-- Overlay nav links -->
       <nav class="mobile-links">
         <a href="/">Games</a>
         <a href="/contact/">Contact</a>
         <a href="/about/">About</a>
       </nav>
-
-      <!-- Socials inside overlay (horizontal row) -->
       <div class="mobile-socials">
         <a href="https://x.com/yourprofile" target="_blank"><img src="/images/xLogo.svg" alt="X"></a>
         <a href="https://instagram.com/yourprofile" target="_blank"><img src="/images/instaLogo.svg" alt="Instagram"></a>
@@ -63,7 +49,7 @@
     </div>
   </header>
 
-  <!-- Main Games Section -->
+  <!-- Page content -->
   <main class="games-page">
     <div class="coming-soon">
       <h2>Something puzzling is on the horizon. It's coming soon, so keep watching!</h2>
@@ -80,32 +66,29 @@
       <h3>NimbleNerd Newsletter</h3>
       <p>Enter your email address to subscribe to the NimbleNerd Newsletter for my latest updates and news stories.</p>
     </div>
-
-    <form class="subscribe-form" action="#" method="post" onsubmit="return false;">
+    <form class="subscribe-form">
       <input type="email" name="email" placeholder="Enter your email" required>
       <button type="submit">Subscribe</button>
     </form>
-
     <div class="socials">
       <a href="https://x.com/yourprofile" target="_blank"><img src="/images/xLogo.svg" alt="X"></a>
       <a href="https://instagram.com/yourprofile" target="_blank"><img src="/images/instaLogo.svg" alt="Instagram"></a>
       <a href="https://tiktok.com/@yourprofile" target="_blank"><img src="/images/tiktokLogo.svg" alt="TikTok"></a>
       <a href="https://youtube.com/yourchannel" target="_blank"><img src="/images/youtubeLogo.svg" alt="YouTube"></a>
     </div>
-
     <div class="footer-bottom">
       <p>NimbleNerdGames &copy; <span id="year"></span> | <a href="/privacy/">Privacy Policy</a></p>
     </div>
   </footer>
 
   <!-- Scripts -->
-  <script src="/js/nav.js"></script>
   <script>
-    // dynamic year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <script src="/js/nav.js"></script>
 </body>
 </html>
+
 
 
 
