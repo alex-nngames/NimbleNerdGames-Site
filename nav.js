@@ -1,19 +1,9 @@
 // nav.js
-
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("menu-toggle");
   const mobileNav = document.getElementById("mobile-nav");
 
   if (!toggle || !mobileNav) return;
-
-  // Create close button dynamically if not already in HTML
-  let closeBtn = document.getElementById("close-btn");
-  if (!closeBtn) {
-    closeBtn = document.createElement("button");
-    closeBtn.id = "close-btn";
-    closeBtn.innerHTML = "&times;"; // X symbol
-    mobileNav.appendChild(closeBtn);
-  }
 
   // Open/close overlay with hamburger
   toggle.addEventListener("click", () => {
@@ -25,9 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
       openMenu();
     }
   });
-
-  // Close menu on close button click
-  closeBtn.addEventListener("click", closeMenu);
 
   // Close menu when clicking a nav link
   const links = mobileNav.querySelectorAll("a");
@@ -41,9 +28,17 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function closeMenu() {
+    // fade out
     mobileNav.classList.remove("active");
+    mobileNav.classList.add("fade-out");
     toggle.classList.remove("active");
+
+    // cleanup fade-out after transition
+    setTimeout(() => {
+      mobileNav.classList.remove("fade-out");
+    }, 400); // match CSS transition
   }
 });
+
 
 
