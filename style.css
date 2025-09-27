@@ -86,7 +86,7 @@ nav a:hover {
   flex-direction: column;
   justify-content: space-between;
   width: 28px;
-  height: 18px; /* 2 lines only */
+  height: 18px; /* slightly shorter for 2 lines */
   cursor: pointer;
   position: absolute;
   top: 20px;
@@ -96,10 +96,10 @@ nav a:hover {
 
 .menu-toggle span {
   display: block;
-  height: 2px; /* thinner lines */
+  height: 2px; /* thinner weight */
   width: 100%;
   background: #000;
-  border-radius: 2px;
+  border-radius: 3px;
   transition: all 0.3s ease;
 }
 
@@ -109,6 +109,11 @@ nav a:hover {
 }
 .menu-toggle.active span:nth-child(2) {
   transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* Hide 3rd line (only 2 bars used) */
+.menu-toggle span:nth-child(3) {
+  display: none;
 }
 
 /* ========================
@@ -123,9 +128,6 @@ nav a:hover {
   background: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* space content vs socials */
-  align-items: center;
-  padding: 60px 0 40px 0;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -139,18 +141,12 @@ nav a:hover {
   pointer-events: auto;
 }
 
-.mobile-nav.fade-out {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-/* Logo + title */
+/* Top section (logo + title) */
 .mobile-nav-top {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-top: 2rem;
 }
 
 .mobile-nav .site-logo {
@@ -160,19 +156,21 @@ nav a:hover {
 
 .mobile-nav .site-title {
   font-size: 2rem;
+  font-weight: 700;
   margin: 0;
 }
 
-/* Links */
+/* Nav links */
 .mobile-links {
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
+  gap: 1.8rem;
   align-items: center;
+  margin-top: 3rem;
 }
 
 .mobile-links a {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-weight: 300;
   color: #000;
   transition: color 0.3s ease;
@@ -182,11 +180,13 @@ nav a:hover {
   color: #555;
 }
 
-/* Socials (anchored bottom) */
+/* Socials pinned to bottom */
 .mobile-socials {
   display: flex;
+  justify-content: center;
   gap: 28px;
-  margin-top: auto; /* push to bottom */
+  margin-top: auto;
+  padding-bottom: 2rem;
 }
 
 .mobile-socials img {
@@ -211,6 +211,7 @@ main {
   text-align: left;
 }
 
+/* Containers */
 .contact-container,
 .about-container,
 .privacy-policy {
@@ -236,7 +237,7 @@ main {
   font-weight: 600;
   margin-bottom: 1.5rem;
   color: #000;
-  text-align: center;
+  text-align: center; /* center heading */
 }
 
 .app-icon {
@@ -253,7 +254,7 @@ main {
 .coming-soon p {
   font-size: 1rem;
   color: #777;
-  text-align: center;
+  text-align: center; /* center paragraph */
 }
 
 /* ========================
@@ -265,22 +266,11 @@ footer {
   color: #666;
 }
 
+/* Newsletter */
 .newsletter-text {
   text-align: left;
   margin: 0 auto 1.25rem auto;
   max-width: 420px;
-}
-
-.newsletter-text h3 {
-  font-weight: 700;
-  font-size: 1.1rem;
-  margin-bottom: 0.4rem;
-  color: #000;
-}
-
-.newsletter-text p {
-  font-size: 0.9rem;
-  color: #999;
 }
 
 .subscribe-form {
@@ -313,6 +303,7 @@ footer {
   background: #444;
 }
 
+/* Socials (footer) */
 footer .socials {
   display: flex;
   justify-content: center;
@@ -332,25 +323,19 @@ footer .socials a:hover img {
   opacity: 0.85;
 }
 
+/* Footer bottom */
 .footer-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   margin-top: 1rem;
   font-size: 0.9rem;
   color: #666;
-}
-.footer-bottom p {
-  margin: 0;
-  width: 100%;
-  text-align: center;
+  text-align: center; /* force center */
 }
 
 .footer-bottom a {
   color: #666;
   border-bottom: 1px dotted #aaa;
 }
+
 .footer-bottom a:hover {
   color: #999;
   border-bottom: 1px solid #999;
@@ -373,6 +358,7 @@ footer .socials a:hover img {
     display: none !important;
   }
 }
+
 
 
 
