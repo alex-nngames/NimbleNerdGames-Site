@@ -79,14 +79,14 @@ nav a:hover {
 }
 
 /* ========================
-   Hamburger Menu (2 lines)
+   Hamburger Menu
    ======================== */
 .menu-toggle {
   display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 28px;
-  height: 18px; /* shorter for 2 lines */
+  height: 18px; /* 2 lines only */
   cursor: pointer;
   position: absolute;
   top: 20px;
@@ -96,7 +96,7 @@ nav a:hover {
 
 .menu-toggle span {
   display: block;
-  height: 2px;   /* thinner lines */
+  height: 2px; /* thinner lines */
   width: 100%;
   background: #000;
   border-radius: 2px;
@@ -105,10 +105,10 @@ nav a:hover {
 
 /* Animate hamburger into X */
 .menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(4px, 4px);
 }
 .menu-toggle.active span:nth-child(2) {
-  transform: rotate(-45deg) translate(6px, -6px);
+  transform: rotate(-45deg) translate(4px, -4px);
 }
 
 /* ========================
@@ -123,9 +123,9 @@ nav a:hover {
   background: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between; /* space content vs socials */
   align-items: center;
-  gap: 3rem;
+  padding: 60px 0 40px 0;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -145,37 +145,35 @@ nav a:hover {
   pointer-events: none;
 }
 
-/* Overlay top logo + title higher */
+/* Logo + title */
 .mobile-nav-top {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -40px; /* lift logo + title */
+  margin-bottom: 1.5rem;
 }
 
 .mobile-nav .site-logo {
   max-width: 140px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .mobile-nav .site-title {
   font-size: 2rem;
-  font-weight: 700;
   margin: 0;
 }
 
-/* Nav links inside overlay */
+/* Links */
 .mobile-links {
-  margin-top: -20px; /* pull links higher */
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.4rem;
   align-items: center;
 }
 
 .mobile-links a {
   font-size: 1.8rem;
-  font-weight: 400; /* thinner */
+  font-weight: 300;
   color: #000;
   transition: color 0.3s ease;
 }
@@ -184,21 +182,21 @@ nav a:hover {
   color: #555;
 }
 
-/* Social icons inside overlay */
+/* Socials (anchored bottom) */
 .mobile-socials {
   display: flex;
   gap: 28px;
-  margin-top: 2rem;
+  margin-top: auto; /* push to bottom */
 }
 
 .mobile-socials img {
-  width: 56px;
-  height: 56px;
+  width: 42px;
+  height: 42px;
   transition: transform 0.18s ease, opacity 0.18s ease;
 }
 
 .mobile-socials a:hover img {
-  transform: scale(1.15);
+  transform: scale(1.12);
   opacity: 0.85;
 }
 
@@ -213,7 +211,6 @@ main {
   text-align: left;
 }
 
-/* Containers */
 .contact-container,
 .about-container,
 .privacy-policy {
@@ -239,6 +236,7 @@ main {
   font-weight: 600;
   margin-bottom: 1.5rem;
   color: #000;
+  text-align: center;
 }
 
 .app-icon {
@@ -253,9 +251,9 @@ main {
 }
 
 .coming-soon p {
-  text-align: center; /* ✅ center aligned */
   font-size: 1rem;
   color: #777;
+  text-align: center;
 }
 
 /* ========================
@@ -267,11 +265,10 @@ footer {
   color: #666;
 }
 
-/* Newsletter */
 .newsletter-text {
-  max-width: 420px;
+  text-align: left;
   margin: 0 auto 1.25rem auto;
-  text-align: left; /* ✅ align text with email input */
+  max-width: 420px;
 }
 
 .newsletter-text h3 {
@@ -286,7 +283,6 @@ footer {
   color: #999;
 }
 
-/* Subscribe */
 .subscribe-form {
   display: flex;
   justify-content: center;
@@ -317,7 +313,6 @@ footer {
   background: #444;
 }
 
-/* Socials (footer) */
 footer .socials {
   display: flex;
   justify-content: center;
@@ -337,19 +332,25 @@ footer .socials a:hover img {
   opacity: 0.85;
 }
 
-/* Footer bottom */
 .footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   margin-top: 1rem;
   font-size: 0.9rem;
   color: #666;
-  text-align: center; /* ✅ fix center */
+}
+.footer-bottom p {
+  margin: 0;
+  width: 100%;
+  text-align: center;
 }
 
 .footer-bottom a {
   color: #666;
   border-bottom: 1px dotted #aaa;
 }
-
 .footer-bottom a:hover {
   color: #999;
   border-bottom: 1px solid #999;
@@ -372,7 +373,6 @@ footer .socials a:hover img {
     display: none !important;
   }
 }
-
 
 
 
