@@ -119,7 +119,8 @@ nav a:hover {
    ======================== */
 .mobile-nav {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 100%;
   background: #fff;
@@ -127,13 +128,12 @@ nav a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
+  gap: 3rem;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  transition: opacity 0.4s ease, visibility 0.4s ease; /* synced with JS */
   z-index: 1000;
-  text-align: center;
 }
 
 .mobile-nav.active {
@@ -148,19 +148,18 @@ nav a:hover {
   pointer-events: none;
 }
 
-/* Logo + title inside overlay */
 .mobile-nav .site-logo {
-  max-width: 140px;
-  margin: 0 auto 8px auto;
+  max-width: 160px;
+  margin-bottom: 10px;
 }
 
 .mobile-nav .site-title {
   font-size: 2.2rem;
+  margin: 0;
   font-weight: 700;
-  margin: 0 0 1.5rem 0;
 }
 
-/* Nav links inside overlay */
+/* Overlay nav links */
 .mobile-links {
   display: flex;
   flex-direction: column;
@@ -169,7 +168,7 @@ nav a:hover {
 }
 
 .mobile-links a {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 300;
   color: #000;
   transition: color 0.3s ease;
@@ -179,17 +178,17 @@ nav a:hover {
   color: #555;
 }
 
-/* Socials inside overlay */
+/* Overlay socials */
 .mobile-socials {
   display: flex;
   justify-content: center;
-  gap: 36px;
+  gap: 32px;
   margin-top: 2rem;
 }
 
 .mobile-socials img {
-  width: 60px;
-  height: 60px;
+  width: 56px;
+  height: 56px;
   transition: transform 0.18s ease, opacity 0.18s ease;
 }
 
@@ -264,7 +263,7 @@ footer {
 
 /* Newsletter */
 .newsletter-text {
-  text-align: left;
+  text-align: center; /* fixed alignment */
   margin: 0 auto 1.25rem auto;
   max-width: 420px;
 }
@@ -337,11 +336,7 @@ footer .socials a:hover img {
   margin-top: 1rem;
   font-size: 0.9rem;
   color: #666;
-  text-align: center; /* ensure always centered */
-}
-
-.footer-bottom p {
-  margin: 0;
+  text-align: center; /* ensure center */
 }
 
 .footer-bottom a {
