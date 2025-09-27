@@ -42,13 +42,17 @@ header {
 .site-home-link {
   text-decoration: none;
   color: inherit;
-  display: block;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .site-title {
   text-decoration: none;
   color: #000;
+  font-size: 1.5rem;
+  font-weight: 700;
   transition: none;
 }
 
@@ -58,12 +62,11 @@ header {
 }
 
 .site-logo {
-  display: block;
-  margin: 0 auto 15px auto;
-  max-width: 120px;
+  width: 42px;
   height: auto;
 }
 
+/* Desktop nav */
 nav {
   display: flex;
   justify-content: center;
@@ -120,21 +123,17 @@ nav a:hover {
 }
 
 /* ========================
-   Mobile Nav (with fade)
+   Mobile Nav Overlay
    ======================== */
 .mobile-nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
+  inset: 0;
   background: #fff;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 2rem;
-  font-size: 1.8rem;
-  z-index: 1000;
+  z-index: 9999;
 
   /* Hidden state */
   opacity: 0;
@@ -143,24 +142,59 @@ nav a:hover {
 
   /* Smooth fade */
   transition: opacity 0.4s ease, visibility 0.4s ease;
+  padding: 2rem;
 }
 
 .mobile-nav.active {
-  display: flex;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 
-.mobile-nav a {
-  text-decoration: none;
+/* Top: logo + title */
+.mobile-nav-top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.mobile-nav-top img {
+  width: 42px;
+  height: auto;
+}
+.mobile-nav-top h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
   color: #000;
-  font-weight: 600;
-  transition: color 0.3s ease;
 }
 
-.mobile-nav a:hover {
+/* Center links */
+.mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: center;
+}
+.mobile-links a {
+  color: #000;
+  transition: color 0.3s ease;
+}
+.mobile-links a:hover {
   color: #555;
+}
+
+/* Bottom socials */
+.mobile-socials {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.mobile-socials img {
+  width: 32px;
+  height: 32px;
+  display: block;
 }
 
 /* ========================
@@ -422,7 +456,7 @@ footer .socials a:hover img {
   main {
     padding: 1.5rem 1rem;
   }
-  .mobile-nav a {
+  .mobile-links a {
     font-size: 1.8rem;
   }
 }
@@ -432,7 +466,6 @@ footer .socials a:hover img {
     display: none !important;
   }
 }
-
 
 
 
