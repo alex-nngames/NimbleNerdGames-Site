@@ -23,7 +23,7 @@
       <span></span>
     </div>
 
-    <!-- Logo -->
+    <!-- Logo + Title -->
     <a href="/" class="site-home-link">
       <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
       <h1 class="site-title">NimbleNerd</h1>
@@ -165,25 +165,9 @@
   <script>
     // dynamic year
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // mobile nav toggle
-    const toggle = document.getElementById("menu-toggle");
-    const mobileNav = document.getElementById("mobile-nav");
-
-    toggle.addEventListener("click", () => {
-      toggle.classList.toggle("active");
-      mobileNav.classList.toggle("active");
-    });
-
-    // close menu on link click
-    mobileNav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        mobileNav.classList.remove("active");
-        toggle.classList.remove("active");
-      });
-    });
   </script>
-</body>
   <script src="/js/nav.js"></script>
+</body>
 </html>
+
 
