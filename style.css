@@ -1,24 +1,43 @@
 /* ========================
+   NimbleNerdGames - Updated stylesheet (full)
+   - Controls header, overlay, pages, footer, socials
+   - Tweak variables below for small position changes
+   ======================== */
+
+/* ---------- layout variables (tweak these) ---------- */
+:root{
+  --max-content-width: 800px;
+  --site-logo-size: 140px;          /* default logo width */
+  --site-title-size: 3rem;          /* visual size of NimbleNerd title */
+  --mobile-logo-top: 22px;          /* how far from top the overlay logo block sits (tweak to match non-overlay) */
+  --overlay-links-offset: 120px;    /* distance from top of overlay to start of nav links */
+  --overlay-social-bottom: 96px;    /* distance from bottom of viewport to overlay social row */
+  --social-size: 42px;              /* standard social icon size (footer & overlay) */
+  --hamburger-line-thickness: 2px;  /* thickness for the 2-line hamburger */
+  --font-family: 'Inter', Arial, sans-serif;
+}
+
+/* ========================
    Reset & Base Typography
    ======================== */
+* { box-sizing: border-box; }
+html,body { height:100%; }
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: var(--font-family);
   line-height: 1.5;
   color: #111;
   background: #fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+a { color: inherit; text-decoration: none; }
+p { text-align: left; margin: 0 0 1rem 0; }
+ul { margin: 0 0 1rem 1.2rem; padding: 0; }
 
-p {
-  text-align: left;
-}
-
+/* small emoji icon */
 .emoji {
   display: inline-block;
   width: 1em;
@@ -34,182 +53,214 @@ header {
   background: #fff;
   color: #000;
   padding: 1rem;
-  text-align: center;
   position: relative;
-  z-index: 1000;
-}
-
-.site-home-link {
-  text-decoration: none;
-  color: inherit;
+  z-index: 1200;
   display: block;
   text-align: center;
 }
 
+/* header: site home link (logo + title) - centered */
+.site-home-link {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: inherit;
+}
+.site-home-link img.site-logo {
+  display: block;
+  margin: 0 auto;
+  max-width: var(--site-logo-size);
+  height: auto;
+}
 .site-title {
-  font-size: 2rem;
-  font-weight: 700;
+  display: block;
   margin-top: 0.5rem;
+  font-size: var(--site-title-size);
+  font-weight: 700;
+  line-height: 1;
   color: #000;
 }
 
-.site-logo {
-  display: block;
-  margin: 0 auto 10px auto;
-  max-width: 140px;
-  height: auto;
-}
-
+/* desktop nav (right on large screens, hidden on mobile) */
 nav {
-  display: flex;
-  justify-content: center;
+  display:flex;
+  justify-content:center;
   gap: 40px;
   margin-top: 0.5rem;
 }
-
 nav a {
   color: #000;
   font-size: 1.05rem;
   font-weight: 400;
-  transition: color 0.3s ease;
+  transition: color 0.25s ease;
 }
-
-nav a:hover {
-  color: #444;
-}
+nav a:hover { color: #444; }
 
 /* ========================
-   Hamburger Menu
+   Hamburger (mobile)
+   - visually two thin lines, lighter weight
+   - keeps animation into X using first & third lines
    ======================== */
 .menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 28px;
-  height: 18px; /* slightly shorter since only 2 lines */
-  cursor: pointer;
+  display: none; /* show on mobile via media query */
   position: absolute;
   top: 20px;
-  left: 20px;
-  z-index: 1100;
+  left: 18px;
+  width: 34px;
+  height: 26px;
+  cursor: pointer;
+  z-index:1300;
+  align-items: flex-start;
+  justify-content: center;
 }
 
+/* There are 3 spans in markup but we hide the middle one visually
+   so it looks like two horizontal lines. This keeps simple transform animations. */
 .menu-toggle span {
   display: block;
-  height: 2px; /* lighter weight */
   width: 100%;
+  height: var(--hamburger-line-thickness);
   background: #000;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+  border-radius: 3px;
+  transition: transform 0.28s ease, opacity 0.18s ease;
 }
 
-/* Only 2 lines in hamburger */
-.menu-toggle span:nth-child(3) {
-  display: none;
-}
+/* hide middle line so it looks like two lines */
+.menu-toggle span:nth-child(2) { opacity: 0; transform: translateX(-6px); }
 
-/* Animate hamburger into X */
+/* active: rotate first & third to form an X */
 .menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(6px, 6px);
 }
-.menu-toggle.active span:nth-child(2) {
-  transform: rotate(-45deg) translate(4px, -4px);
+.menu-toggle.active span:nth-child(2) { opacity: 0; }
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
+
+/* Slightly lighter look (reduce opacity) */
+.menu-toggle span { opacity: 0.98; }
 
 /* ========================
-   Mobile Nav Overlay
+   Mobile Overlay Nav (fullscreen)
+   - uses absolute top placement for logo/title so the logo doesn't visually shift
+   - links are centered, but start lower so logo stays visually in the same place
    ======================== */
 .mobile-nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
+  inset: 0;
   width: 100%;
+  height: 100vh;
   background: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* shift everything higher */
-  align-items: center;
-  gap: 2.5rem;
-  padding-top: 5rem; /* push content down slightly */
+  z-index: 1250;
+
+  /* start hidden */
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
-  z-index: 1000;
-  text-align: center;
+
+  /* we use stacking of children; main content is centered */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: opacity 0.38s ease, visibility 0.38s ease;
 }
 
+/* active overlay */
 .mobile-nav.active {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
 
-.mobile-nav.fade-out {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
+/* remove any dynamic close button if present (we don't want double X's) */
+.mobile-nav #close-btn { display: none !important; }
 
-.mobile-nav .site-logo {
-  max-width: 140px;
-  margin-bottom: 8px;
-}
-
-.mobile-nav .site-title {
-  font-size: 2rem;
-  margin: 0 0 1rem 0;
-}
-
-.mobile-links {
+/* Place the logo/title absolutely near the top of the overlay,
+   so it visually matches the non-overlay header placement. */
+.mobile-nav .mobile-nav-top {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: var(--mobile-logo-top); /* tweak this to match non-overlay */
   display: flex;
   flex-direction: column;
-  gap: 1.8rem;
   align-items: center;
+  gap: 6px;
+  z-index: 1260;
+}
+.mobile-nav .mobile-nav-top .site-logo {
+  max-width: var(--site-logo-size); /* same size as non-overlay */
+  height: auto;
+  display: block;
+  margin: 0;
+}
+.mobile-nav .mobile-nav-top .site-title {
+  font-size: var(--site-title-size);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1;
 }
 
-.mobile-links a {
-  font-size: 1.8rem;
-  font-weight: 300;
-  color: #000;
-  transition: color 0.3s ease;
-}
-
-.mobile-links a:hover {
-  color: #555;
-}
-
-.mobile-socials {
+/* the nav links container sits lower (so logo won't overlap links)
+   change --overlay-links-offset if you need to move links up/down */
+.mobile-links {
+  margin-top: var(--overlay-links-offset);
   display: flex;
-  justify-content: center;
-  gap: 24px;
-  margin-top: 2rem; /* bring them higher */
+  flex-direction: column;
+  gap: 2.2rem;
+  align-items: center;
+  width: 100%;
+  padding: 0 1rem;
 }
 
-.mobile-socials img {
-  width: 42px; /* same as footer */
-  height: 42px;
+/* overlay nav link style */
+.mobile-links a {
+  font-size: 2.0rem;     /* larger */
+  font-weight: 300;      /* lighter weight */
+  color: #000;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+.mobile-links a:hover { color: #555; }
+
+/* overlay social icons - lifted above bottom and centered
+   keep them same size as footer socials */
+.mobile-socials {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: var(--overlay-social-bottom); /* raise/lower as needed */
+  display: flex;
+  gap: 28px;
+  z-index: 1260;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-socials a img,
+.mobile-socials a svg {
+  width: var(--social-size);
+  height: var(--social-size);
+  display: block;
+  object-fit: contain;
   transition: transform 0.18s ease, opacity 0.18s ease;
 }
-
-.mobile-socials a:hover img {
-  transform: scale(1.12);
-  opacity: 0.85;
-}
+.mobile-socials a:hover img { transform: scale(1.15); opacity: 0.88; }
 
 /* ========================
-   Main Content
+   Main content area
    ======================== */
 main {
   display: block;
   margin: 0 auto;
-  max-width: 800px;
+  max-width: var(--max-content-width);
   padding: 2rem 1.5rem;
-  text-align: center; /* force center for coming soon */
+  text-align: left;
 }
 
-/* Containers */
+/* ------------------------
+   Page-specific containers
+   ------------------------ */
 .contact-container,
 .about-container,
 .privacy-policy {
@@ -220,151 +271,204 @@ main {
   line-height: 1.6;
 }
 
+.contact-container h2,
+.about-container h2,
+.privacy-policy h2,
+.privacy-policy h3,
+.privacy-policy h4 {
+  font-weight: 600;
+  margin-top: 2rem;
+}
+
 /* ========================
-   Games Page
+   Games page / Coming soon
    ======================== */
 .games-page {
   text-align: center;
   padding: 2rem 1rem;
-  max-width: 800px;
+  max-width: var(--max-content-width);
   margin: 0 auto;
 }
 
 .coming-soon h2 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
+  font-size: 1.35rem;
+  font-weight: 700;
   color: #000;
+  margin-bottom: 1.5rem;
+  text-align: center; /* ensure center */
 }
 
 .app-icon {
   margin: 1.5rem 0;
+  text-align: center;
 }
-
 .app-icon img {
   max-width: 120px;
   height: auto;
-  display: block;
-  margin: 0 auto;
+  display: inline-block;
 }
 
+/* small description under the app icon */
 .coming-soon p {
   font-size: 1rem;
   color: #777;
-  text-align: center;
+  text-align:center;
+  margin-top: 0.8rem;
 }
 
 /* ========================
-   Footer
+   Footer (newsletter + socials)
    ======================== */
 footer {
   text-align: center;
   padding: 2rem 1rem;
   color: #666;
+  background: transparent;
 }
 
-.newsletter-text {
-  text-align: left;
-  margin: 0 auto 1.25rem auto;
-  max-width: 420px;
+/* footer newsletter container - center container but
+   keep text left inside a width so it lines up with the input */
+.footer-newsletter,
+.footer-newsletter .newsletter-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
-
+.footer-newsletter .newsletter-content {
+  width: 100%;
+  max-width: 420px; /* same width as input */
+  text-align: left; /* left-align inside this box so copy lines up with input */
+  margin: 0 auto 1rem;
+}
 .newsletter-text h3 {
   font-weight: 700;
   font-size: 1.1rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
   color: #000;
 }
-
 .newsletter-text p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #999;
+  margin: 0 0 1rem 0;
+  line-height: 1.4;
 }
 
+/* subscribe form */
 .subscribe-form {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 1.75rem;
+  display:flex;
+  gap:10px;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-bottom:1.5rem;
 }
-
 .subscribe-form input[type="email"] {
-  padding: 10px 14px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
   font-size: 15px;
   min-width: 220px;
   max-width: 420px;
+  width: 100%;
 }
-
 .subscribe-form button {
-  padding: 10px 16px;
+  padding: 10px 18px;
   background: #000;
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
 }
+.subscribe-form button:hover { background: #222; }
 
-.subscribe-form button:hover {
-  background: #444;
-}
-
+/* footer socials - centered & same size used on overlay */
 footer .socials {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
   gap: 28px;
   margin: 1.5rem 0;
 }
-
-footer .socials img {
-  width: 42px;
-  height: 42px;
+footer .socials a img,
+footer .socials a svg {
+  width: var(--social-size);
+  height: var(--social-size);
+  display:block;
+  object-fit:contain;
   transition: transform 0.18s ease, opacity 0.18s ease;
 }
+footer .socials a:hover img { transform: scale(1.12); opacity: 0.85; }
 
-footer .socials a:hover img {
-  transform: scale(1.12);
-  opacity: 0.85;
-}
-
-/* Footer bottom */
+/* Footer bottom - centered correctly */
 .footer-bottom {
+  width: 100%;
+  display:flex;
+  justify-content:center;   /* center horizontally */
+  align-items:center;
   margin-top: 1rem;
-  font-size: 0.9rem;
-  color: #666;
-  text-align: center; /* force center everywhere */
+  text-align:center;
+  color:#666;
+  font-size:0.95rem;
 }
-
+.footer-bottom p {
+  margin: 0;
+  padding: 0;
+}
 .footer-bottom a {
   color: #666;
+  text-decoration: none;
+  margin-left: 6px;
   border-bottom: 1px dotted #aaa;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
 }
-
 .footer-bottom a:hover {
   color: #999;
   border-bottom: 1px solid #999;
 }
 
 /* ========================
-   Responsive
+   Small utility helpers
+   ======================== */
+.center-block { margin-left:auto; margin-right:auto; display:block; }
+
+/* ========================
+   Responsive behaviour
    ======================== */
 @media (max-width: 768px) {
-  nav {
-    display: none;
-  }
-  .menu-toggle {
-    display: flex;
-  }
+  nav { display: none; }
+  .menu-toggle { display:flex; }
+  .site-title { font-size: calc(var(--site-title-size) * 0.9); } /* slightly smaller on small screens */
+
+  /* make sure main content has slightly less padding on very small screens */
+  main { padding: 1.5rem 1rem; }
+
+  /* adjust overlay nav and logo sizes a touch for phones */
+  .mobile-links a { font-size: 1.9rem; }
+  .mobile-nav .mobile-nav-top .site-title { font-size: calc(var(--site-title-size) * 0.9); }
 }
 
+/* large screens - ensure overlay never shows unless explicitly triggered (defensive) */
 @media (min-width: 769px) {
-  .mobile-nav {
-    display: none !important;
-  }
+  .mobile-nav { display:block; } /* still present in DOM but non-active by default */
+  .menu-toggle { display:none; }
 }
+
+/* ========================
+   Small tweaks & fixes
+   ======================== */
+
+/* Ensure coming-soon text center (fix accidental left-align) */
+.coming-soon h2, .coming-soon p { text-align: center; }
+
+/* In-case any previous close button exists (double-X bug): hide it */
+#close-btn { display: none !important; pointer-events: none !important; }
+
+/* tiny touch: reduce very small differences in centering for footer content */
+footer .newsletter-text, footer .subscribe-form { margin-left:auto; margin-right:auto; }
+
+/* End of stylesheet */
+
 
 
 
