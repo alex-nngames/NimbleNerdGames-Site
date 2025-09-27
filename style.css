@@ -468,6 +468,24 @@ footer .socials a:hover img { transform: scale(1.12); opacity: 0.85; }
 footer .newsletter-text, footer .subscribe-form { margin-left:auto; margin-right:auto; }
 
 /* End of stylesheet */
+/* ========================
+   Overlay logo duplication fix
+   ======================== */
+
+/* Hide the overlay's copy of logo/title */
+.mobile-nav .mobile-nav-top {
+  display: none !important;
+}
+
+/* Since logo/title are gone inside overlay, raise nav links up */
+.mobile-links {
+  margin-top: calc(var(--overlay-links-offset) - 100px); /* adjust as needed */
+}
+
+/* Also lift social icons slightly */
+.mobile-socials {
+  bottom: calc(var(--overlay-social-bottom) + 20px);
+}
 
 
 
