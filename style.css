@@ -74,8 +74,8 @@ nav {
 nav a {
   color: #000;
   text-decoration: none;
-  font-size: 1.05rem;   /* slightly larger */
-  font-weight: 300;     /* thinner */
+  font-size: 1.05rem;
+  font-weight: 300;
   transition: color 0.3s ease;
 }
 
@@ -84,12 +84,14 @@ nav a:hover {
 }
 
 /* ========================
-   Mobile Menu
+   Hamburger Menu
    ======================== */
 .menu-toggle {
   display: none;
   flex-direction: column;
-  gap: 5px;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
   cursor: pointer;
   position: absolute;
   top: 20px;
@@ -98,33 +100,63 @@ nav a:hover {
 }
 
 .menu-toggle span {
-  width: 28px;
-  height: 2px;
-  background: black;
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #000;
+  border-radius: 3px;
+  transition: all 0.3s ease;
 }
 
-/* fullscreen overlay menu */
+/* Animate hamburger into X */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ========================
+   Mobile Nav (with fade)
+   ======================== */
 .mobile-nav {
-  display: none;
   position: fixed;
-  inset: 0;
-  background: white;
-  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: #fff;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  gap: 40px;
+  gap: 2rem;
+  font-size: 1.8rem;
+  z-index: 1000;
+
+  /* Hidden state */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  /* Smooth fade */
+  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .mobile-nav.active {
   display: flex;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .mobile-nav a {
-  font-size: 2rem;
-  font-weight: 600;
-  color: black;
   text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .mobile-nav a:hover {
@@ -267,7 +299,7 @@ main {
 .coming-soon p {
   font-size: 1rem;
   color: #777;
-  text-align: center; /* center the text under app icon */
+  text-align: center;
 }
 
 /* ========================
@@ -283,9 +315,9 @@ footer {
 
 /* Newsletter Text */
 .newsletter-text {
-  text-align: left;               /* left align text */
+  text-align: left;
   margin: 0 auto 1.25rem auto;
-  max-width: 420px;               /* match the form input width */
+  max-width: 420px;
 }
 
 .newsletter-text h3 {
@@ -382,17 +414,14 @@ footer .socials a:hover img {
    ======================== */
 @media (max-width: 768px) {
   nav {
-    display: none; /* hide desktop nav */
+    display: none;
   }
-
   .menu-toggle {
-    display: flex; /* show hamburger */
+    display: flex;
   }
-
   main {
     padding: 1.5rem 1rem;
   }
-
   .mobile-nav a {
     font-size: 1.8rem;
   }
@@ -400,99 +429,9 @@ footer .socials a:hover img {
 
 @media (min-width: 769px) {
   .mobile-nav {
-    display: none !important; /* ensure overlay never appears */
+    display: none !important;
   }
 }
-
-/* Animate hamburger into X */
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-
-/* === Mobile Menu Styles === */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 28px;
-  height: 22px;
-  cursor: pointer;
-  z-index: 1001;
-}
-
-.menu-toggle span {
-  display: block;
-  height: 3px;
-  width: 100%;
-  background: #000;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-
-/* Active state: hamburger → X */
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
-
-/* Fullscreen mobile nav */
-.mobile-nav {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100%;
-  background: #fff;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  font-size: 1.8rem;
-  z-index: 1000;
-}
-
-.mobile-nav.active {
-  display: flex;
-}
-
-.mobile-nav a {
-  text-decoration: none;
-  color: #000;
-  font-weight: 600;
-}
-
-/* Responsive behavior */
-@media (max-width: 768px) {
-  header nav {
-    display: none; /* hide desktop nav */
-  }
-
-  .menu-toggle {
-    display: flex; /* show hamburger */
-  }
-}
-
-@media (min-width: 769px) {
-  .mobile-nav {
-    display: none !important; /* always hide mobile nav */
-  }
-}
-
-
 
 
 
