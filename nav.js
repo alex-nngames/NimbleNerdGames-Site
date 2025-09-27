@@ -3,46 +3,47 @@
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("menu-toggle");
   const mobileNav = document.getElementById("mobile-nav");
-  const closeBtn = document.getElementById("close-btn");
 
   if (!toggle || !mobileNav) return;
+
+  // Create close button dynamically if not already in HTML
+  let closeBtn = document.getElementById("close-btn");
+  if (!closeBtn) {
+    closeBtn = document.createElement("button");
+    closeBtn.id = "close-btn";
+    closeBtn.innerHTML = "&times;"; // X symbol
+    mobileNav.appendChild(closeBtn);
+  }
 
   // Open/close overlay with hamburger
   toggle.addEventListener("click", () => {
     const isActive = mobileNav.classList.contains("active");
 
     if (isActive) {
-      // fade out
-      mobileNav.classList.remove("active");
-      mobileNav.classList.add("fade-out");
-      toggle.classList.remove("active");
-
-      // remove fade-out after animation ends
-      setTimeout(() => {
-        mobileNav.classList.remove("fade-out");
-      }, 300); // must match CSS transition time
+      closeMenu();
     } else {
-      // fade in
-      mobileNav.classList.add("active");
-      toggle.classList.add("active");
+      openMenu();
     }
   });
 
-  // Close overlay when clicking the close button
-  if (closeBtn) {
-    closeBtn.addEventListener("click", () => {
-      mobileNav.classList.remove("active");
-      toggle.classList.remove("active");
-    });
-  }
+  // Close menu on close button click
+  closeBtn.addEventListener("click", closeMenu);
 
   // Close menu when clicking a nav link
   const links = mobileNav.querySelectorAll("a");
   links.forEach(link => {
-    link.addEventListener("click", () => {
-      mobileNav.classList.remove("active");
-      toggle.classList.remove("active");
-    });
+    link.addEventListener("click", closeMenu);
   });
+
+  function openMenu() {
+    mobileNav.classList.add("active");
+    toggle.classList.add("active");
+  }
+
+  function closeMenu() {
+    mobileNav.classList.remove("active");
+    toggle.classList.remove("active");
+  }
 });
+
 
