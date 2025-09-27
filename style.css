@@ -42,18 +42,18 @@ header {
 .site-home-link {
   text-decoration: none;
   color: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+  display: block;
+  text-align: center;
 }
 
 .site-title {
   text-decoration: none;
   color: #000;
-  font-size: 1.5rem;
-  font-weight: 700;
   transition: none;
+  font-size: 1.8rem; /* bigger */
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
 }
 
 .site-title:hover {
@@ -62,11 +62,12 @@ header {
 }
 
 .site-logo {
-  width: 42px;
+  display: block;
+  margin: 0 auto 12px auto;
+  max-width: 150px; /* bigger */
   height: auto;
 }
 
-/* Desktop nav */
 nav {
   display: flex;
   justify-content: center;
@@ -151,25 +152,41 @@ nav a:hover {
   pointer-events: auto;
 }
 
-/* Top: logo + title (match desktop) */
+/* Close Button */
+.mobile-nav .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #000;
+  transition: opacity 0.3s ease;
+}
+.mobile-nav .close-btn:hover {
+  opacity: 0.6;
+}
+
+/* Top: logo + title */
 .mobile-nav-top {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1rem;
-  gap: 0.75rem; /* same spacing as header */
+  margin-top: 2rem;
+  gap: 0.75rem;
 }
 
 .mobile-nav-top img {
-  max-width: 120px;  /* match .site-logo */
+  max-width: 170px; /* bigger in overlay */
   height: auto;
 }
 
 .mobile-nav-top h1 {
-  font-size: 1.5rem; /* match .site-title */
+  font-size: 2rem;
   font-weight: 700;
-  color: #000;
   margin: 0;
+  color: #000;
+  text-align: center;
 }
 
 /* Center links */
@@ -177,8 +194,8 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  font-size: 1.05rem; /* match desktop nav */
-  font-weight: 300;
+  font-size: 1.2rem;
+  font-weight: 400;
   text-align: center;
 }
 .mobile-links a {
@@ -189,19 +206,27 @@ nav a:hover {
   color: #555;
 }
 
-/* Bottom socials */
+/* Bottom socials (horizontal + bigger) */
 .mobile-socials {
   display: flex;
-  gap: 28px; /* match footer socials spacing */
-  margin-bottom: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 2rem;
 }
 .mobile-socials img,
 .mobile-socials svg {
-  width: 42px;
-  height: 42px;
+  width: 56px;
+  height: 56px;
   display: block;
+  object-fit: contain;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
-
+.mobile-socials a:hover img,
+.mobile-socials a:hover svg {
+  transform: scale(1.15);
+  opacity: 0.85;
+}
 
 /* ========================
    Main Content Wrapper
@@ -472,6 +497,7 @@ footer .socials a:hover img {
     display: none !important;
   }
 }
+
 
 
 
