@@ -3,10 +3,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.getElementById("menu-toggle");
   const mobileNav = document.getElementById("mobile-nav");
+  const closeBtn = document.getElementById("close-btn");
 
   if (!toggle || !mobileNav) return;
 
-  // Open/close overlay
+  // Open/close overlay with hamburger
   toggle.addEventListener("click", () => {
     const isActive = mobileNav.classList.contains("active");
 
@@ -27,6 +28,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Close overlay when clicking the close button
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      mobileNav.classList.remove("active");
+      toggle.classList.remove("active");
+    });
+  }
+
   // Close menu when clicking a nav link
   const links = mobileNav.querySelectorAll("a");
   links.forEach(link => {
@@ -36,3 +45,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
