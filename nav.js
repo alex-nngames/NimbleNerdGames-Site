@@ -5,40 +5,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!toggle || !mobileNav) return;
 
-  // Open/close overlay with hamburger
+  // Toggle overlay on hamburger click
   toggle.addEventListener("click", () => {
-    const isActive = mobileNav.classList.contains("active");
-
-    if (isActive) {
+    if (mobileNav.classList.contains("active")) {
       closeMenu();
     } else {
       openMenu();
     }
   });
 
-  // Close menu when clicking a nav link
-  const links = mobileNav.querySelectorAll("a");
-  links.forEach(link => {
+  // Close when clicking a nav link
+  mobileNav.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", closeMenu);
   });
 
   function openMenu() {
     mobileNav.classList.add("active");
+    mobileNav.classList.remove("fade-out");
     toggle.classList.add("active");
   }
 
   function closeMenu() {
-    // fade out
     mobileNav.classList.remove("active");
     mobileNav.classList.add("fade-out");
     toggle.classList.remove("active");
 
-    // cleanup fade-out after transition
+    // remove fade-out after transition
     setTimeout(() => {
       mobileNav.classList.remove("fade-out");
-    }, 400); // match CSS transition
+    }, 400);
   }
 });
+
 
 
 
