@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Games – NimbleNerdGames</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
       <span></span>
     </div>
 
-    <!-- Logo -->
+    <!-- Logo + title -->
     <a href="/" class="site-home-link">
       <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
       <h1 class="site-title">NimbleNerd</h1>
@@ -37,47 +37,46 @@
     </nav>
 
     <!-- Mobile fullscreen nav -->
-<div class="mobile-nav" id="mobile-nav">
-  <a href="/" class="site-home-link">
-    <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
-    <h1 class="site-title">NimbleNerd</h1>
-  </a>
+    <div class="mobile-nav" id="mobile-nav">
+      <!-- Logo + title -->
+      <a href="/" class="site-home-link">
+        <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
+        <h1 class="site-title">NimbleNerd</h1>
+      </a>
 
-  <nav class="mobile-links">
-    <a href="/">Games</a>
-    <a href="/contact/">Contact</a>
-    <a href="/about/">About</a>
-  </nav>
+      <!-- Overlay nav links -->
+      <nav class="mobile-links">
+        <a href="/">Games</a>
+        <a href="/contact/">Contact</a>
+        <a href="/about/">About</a>
+      </nav>
 
-  <div class="socials">
-    <a href="https://x.com/yourprofile" target="_blank"><img src="/images/xLogo.svg" alt="X"></a>
-    <a href="https://instagram.com/yourprofile" target="_blank"><img src="/images/instaLogo.svg" alt="Instagram"></a>
-    <a href="https://tiktok.com/@yourprofile" target="_blank"><img src="/images/tiktokLogo.svg" alt="TikTok"></a>
-    <a href="https://youtube.com/yourchannel" target="_blank"><img src="/images/youtubeLogo.svg" alt="YouTube"></a>
-  </div>
-</div>
+      <!-- Socials inside overlay -->
+      <div class="socials">
+        <a href="https://x.com/yourprofile" target="_blank"><img src="/images/xLogo.svg" alt="X"></a>
+        <a href="https://instagram.com/yourprofile" target="_blank"><img src="/images/instaLogo.svg" alt="Instagram"></a>
+        <a href="https://tiktok.com/@yourprofile" target="_blank"><img src="/images/tiktokLogo.svg" alt="TikTok"></a>
+        <a href="https://youtube.com/yourchannel" target="_blank"><img src="/images/youtubeLogo.svg" alt="YouTube"></a>
+      </div>
+    </div>
+  </header>
 
-
-  <!-- Page content -->
+  <!-- Main Games Section -->
   <main class="games-page">
-    <!-- Coming Soon Section -->
-    <section class="coming-soon">
+    <div class="coming-soon">
       <h2>Something puzzling is on the horizon. It's coming soon, so keep watching!</h2>
       <div class="app-icon">
-        <img src="/images/appIcon.svg" alt="App Icon">
+        <img src="/images/question-icon.png" alt="Coming Soon">
       </div>
       <p>A new game coming soon for iOS and Android</p>
-    </section>
+    </div>
   </main>
 
   <!-- Footer -->
   <footer>
     <div class="newsletter-text">
       <h3>NimbleNerd Newsletter</h3>
-      <p>
-        Enter your email address to subscribe to the NimbleNerd
-        Newsletter for my latest updates and news stories.
-      </p>
+      <p>Enter your email address to subscribe to the NimbleNerd Newsletter for my latest updates and news stories.</p>
     </div>
 
     <form class="subscribe-form" action="#" method="post" onsubmit="return false;">
@@ -98,30 +97,14 @@
   </footer>
 
   <!-- Scripts -->
+  <script src="/nav.js"></script>
   <script>
     // dynamic year
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // mobile nav toggle
-    const toggle = document.getElementById("menu-toggle");
-    const mobileNav = document.getElementById("mobile-nav");
-
-    toggle.addEventListener("click", () => {
-      toggle.classList.toggle("active");   // animate hamburger → X
-      mobileNav.classList.toggle("active"); // show/hide mobile menu
-    });
-
-    // close menu on link click
-    mobileNav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        mobileNav.classList.remove("active");
-        toggle.classList.remove("active");
-      });
-    });
   </script>
-  <script src="/js/nav.js"></script>
 </body>
 </html>
+
 
 
 
