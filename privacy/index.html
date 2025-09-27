@@ -8,39 +8,50 @@
 </head>
 <body>
   <!-- Header -->
-  <header>
-    <div class="menu-toggle" id="menu-toggle">
-      <span></span><span></span><span></span>
+<header>
+  <!-- Hamburger toggle (mobile only) -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Logo + Title -->
+  <a href="/" class="site-home-link">
+    <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
+    <h1 class="site-title">NimbleNerd</h1>
+  </a>
+
+  <!-- Desktop nav -->
+  <nav>
+    <a href="/">Games</a>
+    <a href="/contact/">Contact</a>
+    <a href="/about/">About</a>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div class="mobile-nav" id="mobile-nav">
+    <div class="mobile-nav-top">
+      <a href="/" class="site-home-link">
+        <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
+        <h1 class="site-title">NimbleNerd</h1>
+      </a>
     </div>
-    <a href="/" class="site-home-link">
-      <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
-      <h1 class="site-title">NimbleNerd</h1>
-    </a>
-    <nav>
+
+    <nav class="mobile-links">
       <a href="/">Games</a>
       <a href="/contact/">Contact</a>
       <a href="/about/">About</a>
     </nav>
-    <div class="mobile-nav" id="mobile-nav">
-      <div class="mobile-nav-top">
-        <a href="/" class="site-home-link">
-          <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
-          <h1 class="site-title">NimbleNerd</h1>
-        </a>
-      </div>
-      <nav class="mobile-links">
-        <a href="/">Games</a>
-        <a href="/contact/">Contact</a>
-        <a href="/about/">About</a>
-      </nav>
-      <div class="mobile-socials">
-        <a href="https://x.com/yourprofile" target="_blank"><img src="/images/xLogo.svg" alt="X"></a>
-        <a href="https://instagram.com/yourprofile" target="_blank"><img src="/images/instaLogo.svg" alt="Instagram"></a>
-        <a href="https://tiktok.com/@yourprofile" target="_blank"><img src="/images/tiktokLogo.svg" alt="TikTok"></a>
-        <a href="https://youtube.com/yourchannel" target="_blank"><img src="/images/youtubeLogo.svg" alt="YouTube"></a>
-      </div>
+
+    <div class="mobile-socials">
+      <a href="https://x.com/yourprofile" target="_blank"><img src="/images/xLogo.svg" alt="X"></a>
+      <a href="https://instagram.com/yourprofile" target="_blank"><img src="/images/instaLogo.svg" alt="Instagram"></a>
+      <a href="https://tiktok.com/@yourprofile" target="_blank"><img src="/images/tiktokLogo.svg" alt="TikTok"></a>
+      <a href="https://youtube.com/yourchannel" target="_blank"><img src="/images/youtubeLogo.svg" alt="YouTube"></a>
     </div>
-  </header>
+  </div>
+</header>
+
 
   <!-- Main -->
   <main class="privacy-policy">
