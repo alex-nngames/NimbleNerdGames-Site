@@ -8,7 +8,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
   <!-- Global CSS -->
   <link rel="stylesheet" href="/style.css">
@@ -16,11 +16,9 @@
 <body>
   <!-- Header -->
   <header>
-    <!-- Hamburger toggle (mobile only) -->
+    <!-- Hamburger toggle -->
     <div class="menu-toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </div>
 
     <!-- Logo + Title -->
@@ -36,26 +34,22 @@
       <a href="/about/">About</a>
     </nav>
 
-    <!-- Mobile fullscreen nav -->
+    <!-- Mobile overlay nav -->
     <div class="mobile-nav" id="mobile-nav">
-      <!-- Close button -->
-      <button id="close-btn" aria-label="Close menu">&times;</button>
+      <div class="mobile-nav-top">
+        <a href="/" class="site-home-link">
+          <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
+          <h1 class="site-title">NimbleNerd</h1>
+        </a>
+      </div>
 
-      <!-- Logo + title -->
-      <a href="/" class="site-home-link">
-        <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
-        <h1 class="site-title">NimbleNerd</h1>
-      </a>
-
-      <!-- Overlay nav links -->
       <nav class="mobile-links">
         <a href="/">Games</a>
         <a href="/contact/">Contact</a>
         <a href="/about/">About</a>
       </nav>
 
-      <!-- Overlay socials -->
-      <div class="socials overlay-socials">
+      <div class="mobile-socials">
         <a href="https://x.com/yourprofile" target="_blank"><img src="/images/xLogo.svg" alt="X"></a>
         <a href="https://instagram.com/yourprofile" target="_blank"><img src="/images/instaLogo.svg" alt="Instagram"></a>
         <a href="https://tiktok.com/@yourprofile" target="_blank"><img src="/images/tiktokLogo.svg" alt="TikTok"></a>
@@ -64,21 +58,22 @@
     </div>
   </header>
 
-  <!-- Privacy Policy Content -->
+  <!-- Page Content -->
   <main class="privacy-policy">
     <h2>Privacy Policy – [Game Name Here]</h2>
     <p>
-      NimbleNerdGames built this application [game name here] as a Commercial game. 
+      NimbleNerdGames built this application [game name here] as a Commercial game.
       This Service is provided by NimbleNerdGames and is intended for use as is.
     </p>
     <p>
-      This page is used to inform visitors regarding our policies with the collection, use, 
+      This page is used to inform visitors regarding our policies with the collection, use,
       and disclosure of Personal Information if anyone decided to use our Service.
     </p>
     <p>
-      If you choose to use our Service, then you agree to the collection and use of information in relation 
-      to this policy. The Personal Information that we collect is used for providing and improving the Service. 
-      We will not use or share your information with anyone except as described in this Privacy Policy.
+      If you choose to use our Service, then you agree to the collection and use of information
+      in relation to this policy. The Personal Information that we collect is used for providing
+      and improving the Service. We will not use or share your information with anyone except
+      as described in this Privacy Policy.
     </p>
 
     <h3>Information Collection and Use</h3>
@@ -98,7 +93,7 @@
 
     <h4>Third-party Service Providers</h4>
     <p>
-      The game does use third-party services that may collect information used to identify you.  
+      The game does use third-party services that may collect information used to identify you.
       Link to privacy policy of third-party service providers used by the game:
     </p>
     <ul>
@@ -118,9 +113,9 @@
 
     <h3>Security</h3>
     <p>
-      We value your trust in providing us your Personal Information and strive to use 
-      commercially acceptable means of protecting it. However, no method of transmission 
-      over the internet or electronic storage is 100% secure, and we cannot guarantee 
+      We value your trust in providing us your Personal Information and strive to use
+      commercially acceptable means of protecting it. However, no method of transmission
+      over the internet or electronic storage is 100% secure, and we cannot guarantee
       absolute security.
     </p>
 
@@ -133,7 +128,7 @@
 
     <h3>Contact Us</h3>
     <p>
-      If you have any questions or suggestions about our Privacy Policy, 
+      If you have any questions or suggestions about our Privacy Policy,
       contact us at <span class="email">support@nimblenerdgames.com</span>.
     </p>
   </main>
@@ -142,24 +137,18 @@
   <footer>
     <div class="newsletter-text">
       <h3>NimbleNerd Newsletter</h3>
-      <p>
-        Enter your email address to subscribe to the NimbleNerd
-        Newsletter for my latest updates and news stories.
-      </p>
+      <p>Enter your email address to subscribe to the NimbleNerd Newsletter for my latest updates and news stories.</p>
     </div>
-
     <form class="subscribe-form" action="#" method="post" onsubmit="return false;">
       <input type="email" name="email" placeholder="Enter your email" required>
       <button type="submit">Subscribe</button>
     </form>
-
     <div class="socials">
       <a href="https://x.com/yourprofile" target="_blank"><img src="/images/xLogo.svg" alt="X"></a>
       <a href="https://instagram.com/yourprofile" target="_blank"><img src="/images/instaLogo.svg" alt="Instagram"></a>
       <a href="https://tiktok.com/@yourprofile" target="_blank"><img src="/images/tiktokLogo.svg" alt="TikTok"></a>
       <a href="https://youtube.com/yourchannel" target="_blank"><img src="/images/youtubeLogo.svg" alt="YouTube"></a>
     </div>
-
     <div class="footer-bottom">
       <p>NimbleNerdGames &copy; <span id="year"></span> | <a href="/privacy/">Privacy Policy</a></p>
     </div>
@@ -167,12 +156,10 @@
 
   <!-- Scripts -->
   <script>
-    // dynamic year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-  <script src="/nav.js"></script>
+  <script src="/js/nav.js"></script>
 </body>
 </html>
-
 
 
