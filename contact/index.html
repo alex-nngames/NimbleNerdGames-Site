@@ -23,7 +23,7 @@
       <span></span>
     </div>
 
-    <!-- Logo -->
+    <!-- Logo + Title -->
     <a href="/" class="site-home-link">
       <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
       <h1 class="site-title">NimbleNerd</h1>
@@ -38,20 +38,24 @@
 
     <!-- Mobile fullscreen nav -->
     <div class="mobile-nav" id="mobile-nav">
-      <div class="mobile-nav-top">
-        <a href="/" class="site-home-link">
-          <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
-          <h1 class="site-title">NimbleNerd</h1>
-        </a>
-      </div>
+      <!-- Close button -->
+      <button id="close-btn" aria-label="Close menu">&times;</button>
 
+      <!-- Logo + title -->
+      <a href="/" class="site-home-link">
+        <img src="/images/mockLogo.svg" alt="NimbleNerd Logo" class="site-logo">
+        <h1 class="site-title">NimbleNerd</h1>
+      </a>
+
+      <!-- Overlay nav links -->
       <nav class="mobile-links">
         <a href="/">Games</a>
         <a href="/contact/">Contact</a>
         <a href="/about/">About</a>
       </nav>
 
-      <div class="mobile-socials">
+      <!-- Overlay socials -->
+      <div class="socials overlay-socials">
         <a href="https://x.com/yourprofile" target="_blank"><img src="/images/xLogo.svg" alt="X"></a>
         <a href="https://instagram.com/yourprofile" target="_blank"><img src="/images/instaLogo.svg" alt="Instagram"></a>
         <a href="https://tiktok.com/@yourprofile" target="_blank"><img src="/images/tiktokLogo.svg" alt="TikTok"></a>
@@ -79,18 +83,18 @@
 
   <!-- Footer -->
   <footer>
-    <div class="footer-newsletter">
-      <div class="newsletter-text">
-        <h3>NimbleNerd Newsletter</h3>
-        <p>Enter your email address to subscribe to the NimbleNerd<br>
-          Newsletter for my latest updates and news stories.</p>
-      </div>
-
-      <form class="subscribe-form" action="#" method="post" onsubmit="return false;">
-        <input type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-      </form>
+    <div class="newsletter-text">
+      <h3>NimbleNerd Newsletter</h3>
+      <p>
+        Enter your email address to subscribe to the NimbleNerd
+        Newsletter for my latest updates and news stories.
+      </p>
     </div>
+
+    <form class="subscribe-form" action="#" method="post" onsubmit="return false;">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
 
     <div class="socials">
       <a href="https://x.com/yourprofile" target="_blank"><img src="/images/xLogo.svg" alt="X"></a>
