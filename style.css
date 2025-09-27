@@ -86,7 +86,7 @@ nav a:hover {
   flex-direction: column;
   justify-content: space-between;
   width: 28px;
-  height: 18px; /* smaller for 2 lines */
+  height: 18px; /* slightly shorter since only 2 lines */
   cursor: pointer;
   position: absolute;
   top: 20px;
@@ -96,24 +96,24 @@ nav a:hover {
 
 .menu-toggle span {
   display: block;
-  height: 2px; /* lighter */
+  height: 2px; /* lighter weight */
   width: 100%;
   background: #000;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
 
-/* Hide middle bar */
-.menu-toggle span:nth-child(2) {
+/* Only 2 lines in hamburger */
+.menu-toggle span:nth-child(3) {
   display: none;
 }
 
-/* Animate into X */
+/* Animate hamburger into X */
 .menu-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
+.menu-toggle.active span:nth-child(2) {
+  transform: rotate(-45deg) translate(4px, -4px);
 }
 
 /* ========================
@@ -128,17 +128,15 @@ nav a:hover {
   background: #fff;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start; /* shift everything higher */
   align-items: center;
+  gap: 2.5rem;
+  padding-top: 5rem; /* push content down slightly */
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
   transition: opacity 0.4s ease, visibility 0.4s ease;
   z-index: 1000;
-}
-
-/* Keep logo/title in same place as normal header */
-.mobile-nav-top {
-  margin-top: 20px; /* matches normal header spacing */
   text-align: center;
 }
 
@@ -156,12 +154,12 @@ nav a:hover {
 
 .mobile-nav .site-logo {
   max-width: 140px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .mobile-nav .site-title {
   font-size: 2rem;
-  margin: 0;
+  margin: 0 0 1rem 0;
 }
 
 .mobile-links {
@@ -169,12 +167,10 @@ nav a:hover {
   flex-direction: column;
   gap: 1.8rem;
   align-items: center;
-  margin-top: 40px; /* push links down below title */
-  margin-bottom: 50px;
 }
 
 .mobile-links a {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 300;
   color: #000;
   transition: color 0.3s ease;
@@ -188,12 +184,11 @@ nav a:hover {
   display: flex;
   justify-content: center;
   gap: 24px;
-  margin-top: auto;
-  margin-bottom: 80px; /* pull them higher into view */
+  margin-top: 2rem; /* bring them higher */
 }
 
 .mobile-socials img {
-  width: 42px;
+  width: 42px; /* same as footer */
   height: 42px;
   transition: transform 0.18s ease, opacity 0.18s ease;
 }
@@ -211,9 +206,10 @@ main {
   margin: 0 auto;
   max-width: 800px;
   padding: 2rem 1.5rem;
-  text-align: left;
+  text-align: center; /* force center for coming soon */
 }
 
+/* Containers */
 .contact-container,
 .about-container,
 .privacy-policy {
@@ -239,7 +235,6 @@ main {
   font-weight: 600;
   margin-bottom: 1.5rem;
   color: #000;
-  text-align: center;
 }
 
 .app-icon {
@@ -268,7 +263,6 @@ footer {
   color: #666;
 }
 
-/* Newsletter */
 .newsletter-text {
   text-align: left;
   margin: 0 auto 1.25rem auto;
@@ -287,7 +281,6 @@ footer {
   color: #999;
 }
 
-/* Subscribe */
 .subscribe-form {
   display: flex;
   justify-content: center;
@@ -318,7 +311,6 @@ footer {
   background: #444;
 }
 
-/* Socials (footer) */
 footer .socials {
   display: flex;
   justify-content: center;
@@ -343,7 +335,7 @@ footer .socials a:hover img {
   margin-top: 1rem;
   font-size: 0.9rem;
   color: #666;
-  text-align: center;
+  text-align: center; /* force center everywhere */
 }
 
 .footer-bottom a {
@@ -373,6 +365,7 @@ footer .socials a:hover img {
     display: none !important;
   }
 }
+
 
 
 
