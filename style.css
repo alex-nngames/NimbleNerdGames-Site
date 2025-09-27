@@ -46,24 +46,18 @@ header {
   text-align: center;
 }
 
+.site-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #000;
+  margin: 0.4rem 0 0;
+}
+
 .site-logo {
   display: block;
   margin: 0 auto 10px auto;
-  max-width: 150px; /* bigger logo */
+  max-width: 120px;
   height: auto;
-}
-
-.site-title {
-  text-decoration: none;
-  color: #000;
-  font-size: 1.8rem; /* bigger title */
-  font-weight: 700;
-  margin: 0;
-}
-
-.site-title:hover {
-  color: #000;
-  opacity: 1;
 }
 
 nav {
@@ -132,15 +126,15 @@ nav a:hover {
   background: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 3rem 1rem;
+  padding-top: 60px;
   z-index: 1000;
 
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .mobile-nav.active {
@@ -149,36 +143,35 @@ nav a:hover {
   pointer-events: auto;
 }
 
-/* Logo + title inside overlay */
-.mobile-nav .site-home-link {
+.mobile-nav-top {
   text-align: center;
+  margin-bottom: 40px;
 }
 
-.mobile-nav .site-logo {
-  max-width: 160px;
+.mobile-nav-top .site-logo {
+  max-width: 120px;
   margin: 0 auto 10px auto;
 }
 
-.mobile-nav .site-title {
-  font-size: 2rem;
+.mobile-nav-top .site-title {
+  font-size: 1.6rem;
   font-weight: 700;
   margin: 0;
 }
 
-/* Nav links inside overlay */
 .mobile-links {
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
-  text-align: center;
-  margin: 2rem 0;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .mobile-links a {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #000;
+  font-size: 2.2rem;
+  font-weight: 300;
   text-decoration: none;
+  color: #000;
   transition: color 0.3s ease;
 }
 
@@ -186,19 +179,18 @@ nav a:hover {
   color: #555;
 }
 
-/* Social icons in overlay */
 .mobile-socials {
   display: flex;
   justify-content: center;
-  gap: 28px;
-  margin-top: auto;
-  margin-bottom: 2rem;
+  align-items: center;
+  gap: 32px;
 }
 
 .mobile-socials img {
-  width: 52px;   /* bigger than desktop */
-  height: 52px;
+  width: 50px;
+  height: 50px;
   display: block;
+  object-fit: contain;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
@@ -208,7 +200,7 @@ nav a:hover {
 }
 
 /* ========================
-   Main Content Wrapper
+   Main Content
    ======================== */
 main {
   display: block;
@@ -218,16 +210,13 @@ main {
   text-align: left;
 }
 
-/* ========================
-   Contact / About / Privacy
-   ======================== */
+/* Contact / About / Privacy */
 .contact-container,
 .about-container,
 .privacy-policy {
   max-width: 700px;
   margin: 0 auto;
   padding: 2rem 1rem;
-  text-align: left;
   line-height: 1.6;
 }
 
@@ -344,6 +333,7 @@ footer .subscribe-form {
   flex-wrap: wrap;
   align-items: center;
 }
+
 footer .subscribe-form input[type="email"] {
   padding: 10px 14px;
   border-radius: 6px;
@@ -352,6 +342,7 @@ footer .subscribe-form input[type="email"] {
   min-width: 220px;
   max-width: 420px;
 }
+
 footer .subscribe-form button {
   padding: 10px 16px;
   background: #222;
@@ -360,7 +351,9 @@ footer .subscribe-form button {
   border-radius: 8px;
   cursor: pointer;
 }
-footer .subscribe-form button:hover { background:#444; }
+footer .subscribe-form button:hover {
+  background: #444;
+}
 
 footer .socials {
   display: flex;
@@ -370,9 +363,9 @@ footer .socials {
   margin: 1.5rem 0;
 }
 footer .socials img {
-  width: 42px;
-  height: 42px;
-  display: block;
+  width: 42px !important;
+  height: 42px !important;
+  object-fit: contain;
   transition: transform 0.18s ease, opacity 0.18s ease;
 }
 footer .socials a:hover img {
@@ -389,9 +382,6 @@ footer .socials a:hover img {
   text-align: center;
   color: #666;
   font-size: 0.95rem;
-}
-.footer-bottom p {
-  margin: 0;
 }
 .footer-bottom a {
   color: #666;
@@ -425,6 +415,7 @@ footer .socials a:hover img {
     display: none !important;
   }
 }
+
 
 
 
